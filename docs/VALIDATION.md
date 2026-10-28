@@ -42,3 +42,13 @@
 최종 GUI 실행 상태에서도 `reports/final_smoke/smoke.json`의 모든 런타임 check가 통과했습니다. 시험 명령 발행률을 시뮬레이션 시간 기준 최대 50 Hz로 제한했습니다. 초기 반복 기록은 제한 전 시험 도구로 수집되어 `/cmd_vel` 기록 빈도가 높습니다.
 
 처음 발견한 텍스처 흰색 렌더링은 기본 plane UV로 수정했습니다. 수정 전 시험은 `reports/smoke_first`에 남아 있으므로 영상 검증 증거로 사용하지 않습니다. `reports/smoke`와 이후 결과는 수정된 노면입니다.
+
+## NVIDIA 드라이버 복구와 재검증 (2026-10-28)
+
+현재 커널은 `7.0.0-34-generic`인데 설치된 NVIDIA 모듈은 이전 `7.0.0-31`용뿐이었습니다. Secure Boot는 꺼져 있었고 `modinfo nvidia`는 모듈을 찾지 못했습니다. 패키지 목록 갱신 후 기존 커널용 사전 제작 모듈이 요구하는 NVIDIA 버전과 배포 중인 버전이 달라, `nvidia-driver-595-open`, `nvidia-dkms-595-open`, 현재 커널 헤더로 `595.99.02` 모듈을 빌드했습니다.
+
+`modprobe nvidia` 후 재부팅 없이 `nvidia-smi`가 정상 동작했습니다. 의존성으로 새 커널 `7.0.0-42`와 같은 버전의 사전 제작 NVIDIA 모듈도 설치됐지만 새 커널로 부팅한 검증은 수행하지 않았습니다.
+
+별도 ROS 도메인 74에서 NVIDIA EGL을 선택해 기본 아커만 시험을 수행했습니다. **15개 검사 모두 통과**, RGB 296개 수신, 직진 거리 0.684349 m. Ogre2 로그의 `GL_RENDERER`는 `NVIDIA GeForce RTX 4060 Laptop GPU/PCIe/SSE2`, `nvidia-smi`에는 Gazebo 렌더링 프로세스와 GPU 메모리 사용 약 422 MiB가 기록됐습니다. 이는 headless 센서 렌더링 검증이며 RViz 화면 검증과는 별개입니다.
+
+근거: `reports/nvidia/smoke/smoke.json`, `reports/nvidia/nvidia-smi.txt`, `reports/nvidia/ogre2.log`, 해당 폴더의 실행 로그와 이미지. 시스템 전체 GPU 설정이나 기본 실행 명령의 GPU 선택은 변경하지 않았습니다.

@@ -214,9 +214,21 @@ rosbag에는 원본 영상도 포함되어 수십 초에 수백 MB가 될 수 �
 
 실제 실행 증거와 미검증 항목은 [검증 결과](docs/VALIDATION.md), 실측해야 할 값은 [모델 점검](docs/MODEL_AUDIT.md), 버전·라이선스는 [출처](docs/SOURCES.md)를 참고하십시오.
 
+## NVIDIA로 headless 실행
+
+하이브리드 GPU 환경에서 NVIDIA를 명시적으로 선택하려면 다음과 같이 실행합니다. NVIDIA 드라이버가 정상 동작하고 아래 EGL 설정 파일이 있는 환경에 해당합니다.
+
+```bash
+__EGL_VENDOR_LIBRARY_FILENAMES=/usr/share/glvnd/egl_vendor.d/10_nvidia.json \
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia \
+./tools/run_sim.sh gui:=false
+```
+
+기본 실행 명령의 GPU 선택은 시스템 설정을 따릅니다. NVIDIA 설치·복구는 호스트 운영체제 작업이며, 저장소를 내려받는 것만으로 드라이버가 설치되지는 않습니다.
+
 ## 문제 해결
 
-- **GPU**: 현재 RTX 4060은 PCI에서 보이지만 `nvidia-smi`가 실패합니다. AMD Radeon 780M의 Mesa/EGL로 headless 카메라 렌더링과 주행 시험이 성공했습니다. NVIDIA 전용 실행을 강제하지 마십시오. GPU가 없는 환경은 `LIBGL_ALWAYS_SOFTWARE=1 ./tools/run_sim.sh gui:=false`를 시도할 수 있으나 성능은 미검증입니다.
+- **GPU**: RTX 4060 드라이버 문제를 해결했습니다. 현재 커널 `7.0.0-34-generic`에 NVIDIA `595.99.02` DKMS 모듈을 설치했고, 재부팅 없이 `nvidia-smi`와 RTX 4060 기반 headless 카메라·주행 시험 15개 항목이 통과했습니다. 이전 실패 원인은 현재 커널용 모듈 누락이었습니다. 근거는 `reports/nvidia/`입니다. AMD Radeon 780M 렌더링도 기존 시험에서 통과했습니다. GPU가 없는 환경의 소프트웨어 렌더링은 미검증입니다.
 - **GUI/Wayland 문제**: `QT_QPA_PLATFORM=xcb ./tools/run_sim.sh` 또는 `gui:=false`를 사용하십시오. 첫 렌더링은 몇 초 지연될 수 있습니다.
 - **차가 안 움직임**: 시뮬레이션 Play 상태, 도메인/partition 일치, 비상 정지 latch, `/clock`, 0.35초 이내 반복 명령을 확인합니다. 아커만에서 속도 0의 요레이트 명령은 제자리 회전시키지 않습니다.
 - **영상이 없음**: `ros2 topic hz /camera/color/image_raw`, `reports` 또는 launch 로그, GPU EGL 지원을 확인합니다. 센서 토픽은 best effort QoS입니다. launch 없이 노드만 실행하면 `/clock`이 없어 작동하지 않습니다.

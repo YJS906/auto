@@ -4,7 +4,7 @@
 
 - 실제 사용한 입력: `src/첫 번째 사진.jpg`, 트랙 ZIP에서 추출한 PNG/PDF/DXF/DWG. 별도 두 번째 트랙 사진은 작업 폴더에서 확인하지 못해 PNG를 비교 자료로 사용했습니다. 다른 ZIP과 PPTX는 수정하지 않았습니다.
 - 사진: 네 바퀴 차체, LIMO PRO 표기, 상부 전방 브래킷의 여러 광학 창이 있는 장치, 전면 표시부와 비상정지 버튼 확인. 장치 모델·렌즈·정확한 각도·IMU/LiDAR 구성·주행 모드는 확인 불가.
-- Ubuntu 24.04.4, ROS Jazzy, Gazebo Sim 8.15.0, ros_gz 1.0.24. NVIDIA RTX 4060 Mobile 드라이버 통신 실패. AMD 780M, Mesa 25.2.8에서 실제 Ogre2 EGL 렌더링 성공.
+- Ubuntu 24.04.4, ROS Jazzy, Gazebo Sim 8.15.0, ros_gz 1.0.24. 초기 NVIDIA RTX 4060 Mobile 드라이버 통신 실패 후 복구 완료: 커널 `7.0.0-34-generic`용 NVIDIA `595.99.02` DKMS 모듈 설치, RTX 4060 Ogre2 EGL 렌더링과 15개 런타임 검사 통과(`reports/nvidia/`). AMD 780M, Mesa 25.2.8에서도 초기 렌더링 시험 성공.
 - 원래 워크스페이스에는 ROS package가 없었음. 현재 독립 `limo_autorace_sim` 패키지만 빌드.
 
 ## 도면
