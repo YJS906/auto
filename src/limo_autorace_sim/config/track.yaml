@@ -1,0 +1,22 @@
+# Drawing nominal dimensions verified against DXF dimension overrides and PDF.
+meters_per_drawing_unit: 0.03
+origin_dxf: [128.493923, 121.986082]
+width_m: 10.0
+height_m: 6.0
+scale_multiplier: 1.0  # change only after measuring the printed/installed track
+pixels_per_meter: 500
+include_layer: Visible
+exclude_handles: ['170A', '170B', '170C', '170D']  # mat perimeter, not road paint
+flatten_tolerance_m: 0.00025
+# CAD consists of closed paint outlines. Fill narrow faces, preserve their holes.
+max_paint_half_width_m: 0.046
+background_rgb: [48, 48, 45]  # provisional; supplied PNG is not a calibrated photo
+paint_rgb: [240, 237, 217]
+# PNG confirms alternating light/dark checker cells; CAD only supplies outlines.
+checker_region_m: [0.97, 5.33, 1.05, 5.83]
+checker_cell_m: 0.04
+checker_y_phase_m: 5.32
+ground_friction: 0.9
+# Physical objects must be explicitly configured; no CAD line becomes a wall.
+obstacles: []
+# Example: [{name: cone_box, xyz: [5.0, 5.55, 0.10], size: [0.12, 0.12, 0.20]}]

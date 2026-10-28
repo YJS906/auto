@@ -1,0 +1,10 @@
+# Provisional names except cmd_vel, odom, imu verified in upstream driver.
+# Change these names to match `ros2 topic list -t` on the actual vehicle.
+cmd_vel: /cmd_vel
+odom: /odom
+image: /camera/color/image_raw
+camera_info: /camera/color/camera_info
+depth: /camera/depth/image_raw
+depth_info: /camera/depth/camera_info
+scan: /scan
+imu: /imu

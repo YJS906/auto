@@ -1,0 +1,16 @@
+[INFO] [1793176249.225381151] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1793176249.225561294] [rviz2]: OpenGl version: 4.6 (GLSL 4.6)
+[INFO] [1793176249.252235401] [rviz2]: Stereo is NOT SUPPORTED
+[INFO] [1793176249.416180223] [rviz2]: Stereo is NOT SUPPORTED
+[ERROR] [1793176249.473540037] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_base.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_base.dae".
+[ERROR] [1793176249.473854967] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_base.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_base.dae".
+[ERROR] [1793176249.474764920] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.474863788] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.475177977] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.475251276] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.475525639] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.475579511] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.475699900] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+[ERROR] [1793176249.475732172] [rviz2]: Could not load resource [/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae]: Unable to open file "/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/meshes/limo_wheel.dae".
+terminate called after throwing an instance of 'std::system_error'
+  what():  Invalid argument

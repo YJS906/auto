@@ -1,0 +1,11 @@
+Trial 1: PASS, straight 0.6778 m
+Trial 2: PASS, straight 0.6843 m
+{
+  "trials": 2,
+  "all_pass": true,
+  "travel_m": [
+    0.6777965471807703,
+    0.6843090430326211
+  ],
+  "reset": "fresh Gazebo process and ROS nodes; original spawn restored"
+}

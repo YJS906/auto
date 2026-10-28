@@ -1,0 +1,3 @@
+# Preserve original CAD bytes and avoid treating CAD records as source diffs.
+*.dxf binary
+*.dwg binary

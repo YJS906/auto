@@ -1,0 +1,18 @@
+# ALL dynamics are provisional. These are source-model values, not measured Pro specs.
+wheelbase: 0.20                 # official Xacro AND driver
+track: 0.172                    # driver; upstream Xacro hinge separation is 0.14
+wheel_radius: 0.045             # official Xacro
+wheel_width: 0.045
+body_size: [0.26, 0.14, 0.10]   # replacement collision envelope, provisional
+body_center_z: 0.08             # from rear axle base_link, provisional
+body_mass: 2.1557               # upstream body only, NOT total Pro mass
+wheel_mass: 0.25                # provisional, consistent on all four wheels
+hinge_mass: 0.03                # provisional
+inner_steering_limit: 0.48869    # official driver's 28 degrees
+central_steering_limit: 0.40     # conservative virtual bicycle angle, rad
+steering_joint_velocity: 1.5    # rad/s, provisional
+steer_p_gain: 8.0               # native joint velocity feedback gain, provisional
+wheel_friction: 0.9
+wheel_slip: 0.0
+wheel_effort: 5.0
+mesh_body_scale: [1.0, 1.0, 1.0] # exterior only; no assertion of Pro geometry

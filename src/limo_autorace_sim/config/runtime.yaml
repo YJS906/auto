@@ -1,0 +1,22 @@
+command_guard:
+  ros__parameters:
+    use_sim_time: true
+    mode: ackermann
+    wheelbase: 0.20  # launch overrides from vehicle.yaml to avoid inconsistency
+    central_steering_limit: 0.40
+    max_speed: 0.6
+    max_yaw_rate: 1.5
+    acceleration: 0.5
+    deceleration: 0.9
+    steering_rate: 0.8
+    command_timeout: 0.35
+    rate: 50.0
+sensor_delay:
+  ros__parameters:
+    use_sim_time: true
+    # Transport delay in seconds; preserve capture stamp, do not fake newer data.
+    rgb_delay: 0.0
+    depth_delay: 0.0
+    lidar_delay: 0.0
+    imu_delay: 0.0
+    max_queue: 150

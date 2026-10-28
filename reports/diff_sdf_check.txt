@@ -1,0 +1,5 @@
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="camera"]/gz_frame_id:/home/a/2026autorace/reports/limo_diff.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="imu"]/gz_frame_id:/home/a/2026autorace/reports/limo_diff.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="camera"]/gz_frame_id:/home/a/2026autorace/reports/limo_diff.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="imu"]/gz_frame_id:/home/a/2026autorace/reports/limo_diff.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+Valid.

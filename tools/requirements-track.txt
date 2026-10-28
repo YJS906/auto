@@ -1,0 +1,3 @@
+ezdxf==1.4.5
+shapely==2.2.0
+# numpy, OpenCV, Pillow, PyYAML come from Ubuntu with --system-site-packages.

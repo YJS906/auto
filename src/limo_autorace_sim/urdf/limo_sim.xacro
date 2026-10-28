@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!-- Adapted topology from WEGO limo_ackerman.xacro / limo_steering_hinge.xacro.
+     Original meshes are external dependencies; see docs/SOURCES.md.
+     No Classic plugin is included. base_link = rear axle centre, +X forward. -->
+<robot name="limo" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:arg name="vehicle_config" default="$(find limo_autorace_sim)/config/vehicle.yaml"/>
+  <xacro:arg name="sensor_config" default="$(find limo_autorace_sim)/config/sensors.yaml"/>
+  <xacro:arg name="mode" default="ackermann"/>
+  <xacro:property name="v" value="${xacro.load_yaml('$(arg vehicle_config)')}"/>
+  <xacro:property name="s" value="${xacro.load_yaml('$(arg sensor_config)')}"/>
+  <xacro:property name="L" value="${v['wheelbase']}"/>
+  <xacro:property name="T" value="${v['track']}"/>
+  <xacro:property name="R" value="${v['wheel_radius']}"/>
+  <xacro:property name="W" value="${v['wheel_width']}"/>
+  <xacro:property name="ack" value="${'$(arg mode)' == 'ackermann'}"/>
+  <xacro:macro name="box_inertia" params="mass x y z">
+    <mass value="${mass}"/><inertia ixx="${mass*(y*y+z*z)/12}" ixy="0" ixz="0" iyy="${mass*(x*x+z*z)/12}" iyz="0" izz="${mass*(x*x+y*y)/12}"/>
+  </xacro:macro>
+  <link name="base_link">
+    <inertial><origin xyz="${L/2} 0 ${v['body_center_z']}"/><xacro:box_inertia mass="${v['body_mass']}" x="${v['body_size'][0]}" y="${v['body_size'][1]}" z="${v['body_size'][2]}"/></inertial>
+    <collision><origin xyz="${L/2} 0 ${v['body_center_z']}"/><geometry><box size="${' '.join(map(str,v['body_size']))}"/></geometry></collision>
+    <visual><origin xyz="${L/2} 0 ${-R}" rpy="0 0 ${pi/2}"/><geometry><mesh filename="package://limo_autorace_sim/meshes/limo_base.dae" scale="${' '.join(map(str,v['mesh_body_scale']))}"/></geometry></visual>
+  </link>
+  <link name="base_footprint"/>
+  <joint name="footprint_joint" type="fixed"><parent link="base_link"/><child link="base_footprint"/><origin xyz="0 0 ${-R}"/></joint>
+  <xacro:macro name="wheel" params="name x side front">
+    <xacro:property name="steers" value="${ack and front}"/>
+    <xacro:if value="${steers}">
+      <link name="${name}_hinge"><inertial><xacro:box_inertia mass="${v['hinge_mass']}" x="0.02" y="0.02" z="0.02"/></inertial></link>
+      <joint name="${name}_steering" type="revolute"><parent link="base_link"/><child link="${name}_hinge"/><origin xyz="${x} ${side*T/2} 0"/><axis xyz="0 0 1"/><limit lower="${-v['inner_steering_limit']}" upper="${v['inner_steering_limit']}" effort="5" velocity="${v['steering_joint_velocity']}"/><dynamics damping="0.05" friction="0.0"/></joint>
+    </xacro:if>
+    <link name="${name}_wheel_link">
+      <inertial><mass value="${v['wheel_mass']}"/><inertia ixx="${v['wheel_mass']*(3*R*R+W*W)/12}" ixy="0" ixz="0" iyy="${v['wheel_mass']*R*R/2}" iyz="0" izz="${v['wheel_mass']*(3*R*R+W*W)/12}"/></inertial>
+      <collision><origin rpy="${pi/2} 0 0"/><geometry><cylinder radius="${R}" length="${W}"/></geometry></collision>
+      <visual><origin xyz="0 ${-side*W/2} 0" rpy="${0 if side == 1 else pi} 0 0"/><geometry><mesh filename="package://limo_autorace_sim/meshes/limo_wheel.dae" scale="${R/0.045} ${W/0.045} ${R/0.045}"/></geometry></visual>
+    </link>
+    <joint name="${name}_wheel" type="continuous">
+      <parent link="${name+'_hinge' if steers else 'base_link'}"/><child link="${name}_wheel_link"/>
+      <origin xyz="${0 if steers else x} ${0 if steers else side*T/2} 0"/><axis xyz="0 1 0"/>
+      <limit effort="${v['wheel_effort']}" velocity="50"/><dynamics damping="0.001" friction="0"/>
+    </joint>
+    <gazebo reference="${name}_wheel_link"><mu1>${v['wheel_friction']}</mu1><mu2>${v['wheel_friction']}</mu2><kp>100000</kp><kd>10</kd><minDepth>0.0001</minDepth><maxVel>0.1</maxVel></gazebo>
+  </xacro:macro>
+  <xacro:wheel name="rear_left" x="0" side="${1}" front="${False}"/>
+  <xacro:wheel name="rear_right" x="0" side="${-1}" front="${False}"/>
+  <xacro:wheel name="front_left" x="${L}" side="${1}" front="${True}"/>
+  <xacro:wheel name="front_right" x="${L}" side="${-1}" front="${True}"/>
+  <xacro:macro name="sensor_link" params="name cfg optical:=false">
+    <link name="${name}_link"/>
+    <joint name="${name}_joint" type="fixed"><parent link="base_link"/><child link="${name}_link"/><origin xyz="${' '.join(map(str,cfg['xyz']))}" rpy="${' '.join(map(str,cfg['rpy']))}"/></joint>
+    <xacro:if value="${optical}"><link name="${name}_optical_frame"/><joint name="${name}_optical_joint" type="fixed"><parent link="${name}_link"/><child link="${name}_optical_frame"/><origin rpy="${-pi/2} 0 ${-pi/2}"/></joint></xacro:if>
+  </xacro:macro>
+  <xacro:sensor_link name="camera" cfg="${s['camera']}" optical="${True}"/>
+  <xacro:macro name="camera_sensor" params="name cfg depth:=false">
+    <gazebo reference="${name}_link"><sensor name="${name}" type="${'depth_camera' if depth else 'camera'}">
+      <always_on>true</always_on><update_rate>${cfg['rate']}</update_rate><topic>/sim/${name}/image</topic><gz_frame_id>${name}_optical_frame</gz_frame_id>
+      <camera><camera_info_topic>/sim/${name}/camera_info</camera_info_topic><optical_frame_id>${name}_optical_frame</optical_frame_id><horizontal_fov>${cfg['hfov']}</horizontal_fov><image><width>${cfg['width']}</width><height>${cfg['height']}</height><format>R8G8B8</format></image><clip><near>${cfg['near']}</near><far>${cfg['far']}</far></clip><noise><type>gaussian</type><mean>0</mean><stddev>${cfg['noise_stddev']}</stddev></noise></camera>
+    </sensor></gazebo>
+  </xacro:macro>
+  <xacro:camera_sensor name="camera" cfg="${s['camera']}"/>
+  <xacro:if value="${s['depth']['enabled']}"><xacro:sensor_link name="depth" cfg="${s['depth']}" optical="${True}"/><xacro:camera_sensor name="depth" cfg="${s['depth']}" depth="${True}"/></xacro:if>
+  <xacro:if value="${s['lidar']['enabled']}">
+    <xacro:sensor_link name="laser" cfg="${s['lidar']}"/>
+    <gazebo reference="laser_link"><sensor name="lidar" type="gpu_lidar"><always_on>true</always_on><update_rate>${s['lidar']['rate']}</update_rate><topic>/sim/scan</topic><gz_frame_id>laser_link</gz_frame_id><lidar><scan><horizontal><samples>${s['lidar']['samples']}</samples><resolution>1</resolution><min_angle>${-pi}</min_angle><max_angle>${pi}</max_angle></horizontal></scan><range><min>${s['lidar']['min']}</min><max>${s['lidar']['max']}</max><resolution>0.01</resolution></range><noise><type>gaussian</type><mean>0</mean><stddev>${s['lidar']['noise_stddev']}</stddev></noise></lidar></sensor></gazebo>
+  </xacro:if>
+  <xacro:if value="${s['imu']['enabled']}">
+    <xacro:sensor_link name="imu" cfg="${s['imu']}"/>
+    <xacro:macro name="noise_axis" params="stddev"><noise type="gaussian"><mean>0</mean><stddev>${stddev}</stddev></noise></xacro:macro>
+    <gazebo reference="imu_link"><sensor name="imu" type="imu"><always_on>true</always_on><update_rate>${s['imu']['rate']}</update_rate><topic>/sim/imu</topic><gz_frame_id>imu_link</gz_frame_id><imu><angular_velocity><x><xacro:noise_axis stddev="${s['imu']['angular_noise_stddev']}"/></x><y><xacro:noise_axis stddev="${s['imu']['angular_noise_stddev']}"/></y><z><xacro:noise_axis stddev="${s['imu']['angular_noise_stddev']}"/></z></angular_velocity><linear_acceleration><x><xacro:noise_axis stddev="${s['imu']['acceleration_noise_stddev']}"/></x><y><xacro:noise_axis stddev="${s['imu']['acceleration_noise_stddev']}"/></y><z><xacro:noise_axis stddev="${s['imu']['acceleration_noise_stddev']}"/></z></linear_acceleration></imu></sensor></gazebo>
+  </xacro:if>
+  <gazebo>
+    <plugin filename="gz-sim-wheel-slip-system" name="gz::sim::systems::WheelSlip">
+      <xacro:macro name="slip_wheel" params="name"><wheel link_name="${name}_wheel_link"><slip_compliance_lateral>${v['wheel_slip']}</slip_compliance_lateral><slip_compliance_longitudinal>${v['wheel_slip']}</slip_compliance_longitudinal><wheel_normal_force>${(v['body_mass']+4*v['wheel_mass']+2*v['hinge_mass'])*9.80665/4}</wheel_normal_force><wheel_radius>${R}</wheel_radius></wheel></xacro:macro>
+      <xacro:slip_wheel name="front_left"/><xacro:slip_wheel name="front_right"/><xacro:slip_wheel name="rear_left"/><xacro:slip_wheel name="rear_right"/>
+    </plugin>
+    <xacro:if value="${ack}">
+      <plugin filename="gz-sim-ackermann-steering-system" name="gz::sim::systems::AckermannSteering">
+        <!-- Rear wheels powered; front wheels rotate passively through contact. -->
+        <left_joint>rear_left_wheel</left_joint><right_joint>rear_right_wheel</right_joint><left_steering_joint>front_left_steering</left_steering_joint><right_steering_joint>front_right_steering</right_steering_joint>
+        <wheel_base>${L}</wheel_base><wheel_separation>${T}</wheel_separation><kingpin_width>${T}</kingpin_width><wheel_radius>${R}</wheel_radius>
+        <!-- Harmonic plugin uses asin(L/Rturn), not the bicycle angle itself. -->
+        <steering_limit>${asin(tan(v['central_steering_limit']))}</steering_limit><steer_p_gain>${v['steer_p_gain']}</steer_p_gain>
+        <topic>/sim/cmd_vel</topic><odom_topic>/sim/odom</odom_topic><tf_topic>/sim/odom_tf</tf_topic><frame_id>odom</frame_id><child_frame_id>base_link</child_frame_id><odom_publish_frequency>50</odom_publish_frequency>
+      </plugin>
+    </xacro:if>
+    <xacro:unless value="${ack}"><plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive"><left_joint>rear_left_wheel</left_joint><left_joint>front_left_wheel</left_joint><right_joint>rear_right_wheel</right_joint><right_joint>front_right_wheel</right_joint><wheel_separation>${T}</wheel_separation><wheel_radius>${R}</wheel_radius><topic>/sim/cmd_vel</topic><odom_topic>/sim/odom</odom_topic><tf_topic>/sim/odom_tf</tf_topic><frame_id>odom</frame_id><child_frame_id>base_link</child_frame_id><odom_publish_frequency>50</odom_publish_frequency></plugin></xacro:unless>
+    <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher"><topic>/sim/joint_states</topic></plugin>
+    <plugin filename="gz-sim-odometry-publisher-system" name="gz::sim::systems::OdometryPublisher"><odom_topic>/evaluation/ground_truth</odom_topic><odom_frame>world</odom_frame><robot_base_frame>base_link</robot_base_frame><dimensions>3</dimensions><odom_publish_frequency>30</odom_publish_frequency><tf_topic>/evaluation/unused_tf</tf_topic></plugin>
+  </gazebo>
+</robot>

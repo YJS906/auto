@@ -1,0 +1,21 @@
+
+Files:             bag_0.mcap
+Bag size:          263.0 MiB
+Storage id:        mcap
+ROS Distro:        jazzy
+Duration:          15.409000000s
+Start:             Jan  1 1970 09:00:00.002000000 (0.002000000)
+End:               Jan  1 1970 09:00:15.411000000 (15.411000000)
+Messages:          77122
+Topic information: Topic: /camera/color/camera_info | Type: sensor_msgs/msg/CameraInfo | Count: 309 | Serialization Format: cdr
+                   Topic: /camera/color/image_raw | Type: sensor_msgs/msg/Image | Count: 285 | Serialization Format: cdr
+                   Topic: /clock | Type: rosgraph_msgs/msg/Clock | Count: 15409 | Serialization Format: cdr
+                   Topic: /cmd_vel | Type: geometry_msgs/msg/Twist | Count: 41867 | Serialization Format: cdr
+                   Topic: /evaluation/ground_truth | Type: nav_msgs/msg/Odometry | Count: 453 | Serialization Format: cdr
+                   Topic: /imu | Type: sensor_msgs/msg/Imu | Count: 1541 | Serialization Format: cdr
+                   Topic: /joint_states | Type: sensor_msgs/msg/JointState | Count: 15409 | Serialization Format: cdr
+                   Topic: /odom | Type: nav_msgs/msg/Odometry | Count: 770 | Serialization Format: cdr
+                   Topic: /tf | Type: tf2_msgs/msg/TFMessage | Count: 1078 | Serialization Format: cdr
+                   Topic: /tf_static | Type: tf2_msgs/msg/TFMessage | Count: 1 | Serialization Format: cdr
+Service:           0
+Service information: 
