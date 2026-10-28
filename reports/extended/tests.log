@@ -1,0 +1,49 @@
+Starting >>> limo_autorace_sim
+UpdateCTestConfiguration  from :/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+Parse Config file:/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+   Site: a
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261028-0951 - Experimental
+UpdateCTestConfiguration  from :/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+Parse Config file:/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+Test project /home/a/2026autorace/build/limo_autorace_sim
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: core
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml" "--package-name" "limo_autorace_sim" "--output-file" "/home/a/2026autorace/build/limo_autorace_sim/ament_cmake_pytest/core.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/a/2026autorace/src/limo_autorace_sim/test/test_core.py" "-o" "cache_dir=/home/a/2026autorace/build/limo_autorace_sim/ament_cmake_pytest/core/.cache" "--junit-xml=/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml" "--junit-prefix=limo_autorace_sim"
+1: Working Directory: /home/a/2026autorace/build/limo_autorace_sim
+1: Test timeout computed to be: 60
+1: -- run_test.py: invoking following command in '/home/a/2026autorace/build/limo_autorace_sim':
+1:  - /usr/bin/python3 -u -m pytest /home/a/2026autorace/src/limo_autorace_sim/test/test_core.py -o cache_dir=/home/a/2026autorace/build/limo_autorace_sim/ament_cmake_pytest/core/.cache --junit-xml=/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml --junit-prefix=limo_autorace_sim
+1: ============================= test session starts ==============================
+1: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+1: cachedir: build/limo_autorace_sim/ament_cmake_pytest/core/.cache
+1: rootdir: /home/a/2026autorace
+1: plugins: ament-pep257-0.17.5, ament-flake8-0.17.5, launch-testing-ros-0.26.12, ament-xmllint-0.17.5, ament-copyright-0.17.5, ament-lint-0.17.5, launch-testing-3.4.11, colcon-core-0.21.0, typeguard-4.1.5, cov-4.1.0
+1: collected 5 items
+1: 
+1: ../../src/limo_autorace_sim/test/test_core.py .....                      [100%]
+1: 
+1: - generated xml file: /home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml -
+1: ============================== 5 passed in 0.10s ===============================
+1: -- run_test.py: return code 0
+1: -- run_test.py: verify result file '/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml'
+1/1 Test #1: core .............................   Passed    0.45 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Label Time Summary:
+pytest    =   0.45 sec*proc (1 test)
+
+Total Test time (real) =   0.45 sec
+Finished <<< limo_autorace_sim [0.50s]
+
+Summary: 1 package finished [0.61s]
+Summary: 6 tests, 0 errors, 0 failures, 0 skipped

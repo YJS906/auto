@@ -1,0 +1,119 @@
+[INFO] [launch]: All log files can be found below /home/a/.ros/log/2026-10-28-18-52-32-454721-a-5332
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [gz-1]: process started with pid [5338]
+[INFO] [robot_state_publisher-2]: process started with pid [5341]
+[INFO] [parameter_bridge-3]: process started with pid [5342]
+[INFO] [create-4]: process started with pid [5343]
+[INFO] [command_guard-5]: process started with pid [5345]
+[INFO] [sensor_delay-6]: process started with pid [5346]
+[robot_state_publisher-2] [WARN] [1793181152.572462432] [kdl_parser]: The root link base_link has an inertia specified in the URDF, but KDL does not support a root link with an inertia.  As a workaround, you can add an extra dummy link to your URDF.
+[robot_state_publisher-2] [INFO] [1793181152.572568388] [robot_state_publisher]: Robot initialized
+[gz-1] [1;32m[Msg] [0m[1;32mGazebo Sim Server v[0m[1;32m8.15.0[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mLoading SDF world file[[0m[1;32m/home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/worlds/autorace.sdf[0m[1;32m].[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing entity system service on [[0m[1;32m/[0m[1;32mentity/system/add[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mCreate[0m[1;32m service on [[0m[1;32m/world/autorace/create_multiple[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mCreate[0m[1;32m service on [[0m[1;32m/world/autorace/create_multiple/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mRemove[0m[1;32m service on [[0m[1;32m/world/autorace/remove[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mRemove[0m[1;32m service on [[0m[1;32m/world/autorace/remove/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/autorace/set_pose[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/autorace/set_pose/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/autorace/set_pose_vector[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPose[0m[1;32m service on [[0m[1;32m/world/autorace/set_pose_vector/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mLight configuration[0m[1;32m service on [[0m[1;32m/world/autorace/light_config[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mLight configuration[0m[1;32m service on [[0m[1;32m/world/autorace/light_config/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPhysics[0m[1;32m service on [[0m[1;32m/world/autorace/set_physics[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPhysics[0m[1;32m service on [[0m[1;32m/world/autorace/set_physics/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mSphericalCoordinates[0m[1;32m service on [[0m[1;32m/world/autorace/set_spherical_coordinates[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mSphericalCoordinates[0m[1;32m service on [[0m[1;32m/world/autorace/set_spherical_coordinates/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mEnable collision[0m[1;32m service on [[0m[1;32m/world/autorace/enable_collision[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mEnable collision[0m[1;32m service on [[0m[1;32m/world/autorace/enable_collision/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mDisable collision[0m[1;32m service on [[0m[1;32m/world/autorace/disable_collision[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mDisable collision[0m[1;32m service on [[0m[1;32m/world/autorace/disable_collision/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/autorace/visual_config[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/autorace/visual_config/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/autorace/wheel_slip[0m[1;32m] (async)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mMaterial[0m[1;32m service on [[0m[1;32m/world/autorace/wheel_slip/blocking[0m[1;32m] (blocking)[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mLoaded level [[0m[1;32mdefault[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing world controls on [[0m[1;32m/world/autorace[0m[1;32m/control], [[0m[1;32m/world/autorace[0m[1;32m/control/state] and [[0m[1;32m/world/autorace[0m[1;32m/playback/control][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing GUI information on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mgui/info[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mWorld [[0m[1;32mautorace[0m[1;32m] initialized with [[0m[1;32mphysics[0m[1;32m] physics profile.[0m[1;32m[0m
+[create-4] [INFO] [1793181153.046605315] [ros_gz_sim]: Entity creation successful.
+[INFO] [create-4]: process has finished cleanly [pid 5343]
+[parameter_bridge-3] [INFO] [1793181153.589521156] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/clock (gz.msgs.Clock) -> /clock (rosgraph_msgs/msg/Clock)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.590284518] [ros_gz_bridge]: Creating ROS->GZ Bridge: [/sim/cmd_vel (geometry_msgs/msg/Twist) -> /sim/cmd_vel (gz.msgs.Twist)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.591598869] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/odom (gz.msgs.Odometry) -> /odom (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.592528419] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/odom_tf (gz.msgs.Pose_V) -> /tf (tf2_msgs/msg/TFMessage)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.593395183] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/joint_states (gz.msgs.Model) -> /joint_states (sensor_msgs/msg/JointState)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.594256165] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/evaluation/ground_truth (gz.msgs.Odometry) -> /evaluation/ground_truth (nav_msgs/msg/Odometry)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.594467867] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/camera/image (gz.msgs.Image) -> /sim/raw/image (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.594745320] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/camera/camera_info (gz.msgs.CameraInfo) -> /sim/raw/camera_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.595096439] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/depth/image (gz.msgs.Image) -> /sim/raw/depth (sensor_msgs/msg/Image)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.595307189] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/depth/camera_info (gz.msgs.CameraInfo) -> /sim/raw/depth_info (sensor_msgs/msg/CameraInfo)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.595521476] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/scan (gz.msgs.LaserScan) -> /sim/raw/scan (sensor_msgs/msg/LaserScan)] (Lazy 0)
+[parameter_bridge-3] [INFO] [1793181153.595804169] [ros_gz_bridge]: Creating GZ->ROS Bridge: [/sim/imu (gz.msgs.IMU) -> /sim/raw/imu (sensor_msgs/msg/Imu)] (Lazy 0)
+[gz-1] [1;32m[Msg] [0m[1;32mServing world SDF generation service on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mgenerate_world_sdf[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing world names on [[0m[1;32m/gazebo/worlds[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mResource path add service on [[0m[1;32m/gazebo/resource_paths/add[0m[1;32m].[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mResource path get service on [[0m[1;32m/gazebo/resource_paths/get[0m[1;32m].[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mResource path resolve service on [[0m[1;32m/gazebo/resource_paths/resolve[0m[1;32m].[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mResource paths published on [[0m[1;32m/gazebo/resource_paths[0m[1;32m].[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServer control service on [[0m[1;32m/server_control[0m[1;32m].[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mFound no publishers on /stats, adding root stats topic[0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mFound no publishers on /clock, adding root clock topic[0m[1;32m[0m
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="camera"]/gz_frame_id:/tmp/limo_autorace_czhbx69o/limo.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="depth"]/gz_frame_id:/tmp/limo_autorace_czhbx69o/limo.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="imu"]/gz_frame_id:/tmp/limo_autorace_czhbx69o/limo.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33mWarning [Utils.cc:132][0m [/sdf/model[@name="limo"]/link[@name="base_link"]/sensor[@name="lidar"]/gz_frame_id:/tmp/limo_autorace_czhbx69o/limo.urdf:L0]: XML Element[gz_frame_id], child of element[sensor], not defined in SDF. Copying[gz_frame_id] as children of [sensor].
+[gz-1] [1;33m[Wrn] [Ogre2Camera.cc:423] [0m[1;33mOgre2Camera::SetVisibilityMask: Mask bits [0m[1;33mc0000000[0m[1;33m are set but will be ignored as they conflict with the [0m[1;33mreserved bits used internally by the ogre2 backend.[0m[1;33m[0m
+[parameter_bridge-3] [INFO] [1793181172.736296460] [ros_gz_bridge]: Passing message from ROS geometry_msgs/msg/Twist to Gazebo gz.msgs.Twist (showing msg only once per type)
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [sensor_delay-6]: sending signal 'SIGINT' to process[sensor_delay-6]
+[INFO] [command_guard-5]: sending signal 'SIGINT' to process[command_guard-5]
+[INFO] [parameter_bridge-3]: sending signal 'SIGINT' to process[parameter_bridge-3]
+[INFO] [robot_state_publisher-2]: sending signal 'SIGINT' to process[robot_state_publisher-2]
+[INFO] [gz-1]: sending signal 'SIGINT' to process[gz-1]
+[robot_state_publisher-2] [INFO] [1793181180.397898463] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[parameter_bridge-3] [INFO] [1793181180.397898193] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[sensor_delay-6] Traceback (most recent call last):
+[sensor_delay-6]   File "/home/a/2026autorace/install/limo_autorace_sim/lib/limo_autorace_sim/sensor_delay", line 3, in <module>
+[sensor_delay-6]     if __name__ == "__main__": main()
+[sensor_delay-6]                                ^^^^^^
+[sensor_delay-6]   File "/home/a/2026autorace/install/limo_autorace_sim/lib/python3.12/site-packages/limo_autorace_sim/sensor_delay.py", line 50, in main
+[sensor_delay-6]     n.destroy_node()
+[sensor_delay-6]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py", line 1958, in destroy_node
+[sensor_delay-6]     self.destroy_subscription(self._subscriptions[0])
+[sensor_delay-6]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py", line 1854, in destroy_subscription
+[parameter_bridge-3] [INFO] [1793181180.400656440] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[sensor_delay-6]     subscription.destroy()
+[sensor_delay-6]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/subscription.py", line 101, in destroy
+[sensor_delay-6]     self.handle.destroy_when_not_in_use()
+[sensor_delay-6] KeyboardInterrupt
+[robot_state_publisher-2] [INFO] [1793181180.400980728] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[command_guard-5] Traceback (most recent call last):
+[command_guard-5]   File "/home/a/2026autorace/install/limo_autorace_sim/lib/limo_autorace_sim/command_guard", line 3, in <module>
+[command_guard-5]     if __name__ == "__main__": main()
+[command_guard-5]                                ^^^^^^
+[command_guard-5]   File "/home/a/2026autorace/install/limo_autorace_sim/lib/python3.12/site-packages/limo_autorace_sim/command_guard.py", line 71, in main
+[command_guard-5]     node.destroy_node()
+[command_guard-5]   File "/opt/ros/jazzy/lib/python3.12/site-packages/rclpy/node.py", line 1968, in destroy_node
+[command_guard-5]     self.__node.destroy_when_not_in_use()
+[command_guard-5] KeyboardInterrupt
+[ERROR] [command_guard-5]: process has died [pid 5345, exit code -2, cmd '/home/a/2026autorace/install/limo_autorace_sim/lib/limo_autorace_sim/command_guard --ros-args -r __node:=command_guard --params-file /home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/config/runtime.yaml --params-file /tmp/launch_params_ilnaoqgv -r cmd_vel:=/cmd_vel'].
+[ERROR] [sensor_delay-6]: process has died [pid 5346, exit code -2, cmd '/home/a/2026autorace/install/limo_autorace_sim/lib/limo_autorace_sim/sensor_delay --ros-args -r __node:=sensor_delay --params-file /home/a/2026autorace/install/limo_autorace_sim/share/limo_autorace_sim/config/runtime.yaml -r image:=/camera/color/image_raw -r camera_info:=/camera/color/camera_info -r depth:=/camera/depth/image_raw -r depth_info:=/camera/depth/camera_info -r scan:=/scan -r imu:=/imu'].
+[INFO] [robot_state_publisher-2]: process has finished cleanly [pid 5341]
+[INFO] [parameter_bridge-3]: process has finished cleanly [pid 5342]
+[gz-1] [1;32m[Msg] [0m[1;32mAckermannSteering subscribing to twist messages on [[0m[1;32m/sim/cmd_vel[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mOdometryPublisher publishing odometry on [[0m[1;32m/evaluation/ground_truth[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mOdometryPublisher publishing odometry with covariance on [[0m[1;32m/model/limo/odometry_with_covariance[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mOdometryPublisher publishing Pose_V (TF) on [[0m[1;32m/evaluation/unused_tf[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mLoading plugin [[0m[1;32mgz-rendering-ogre2[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing scene information on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mscene/info[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing graph information on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mscene/graph[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing full state on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mstate[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mServing full state (async) on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mstate_async[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPublishing scene information on [[0m[1;32m/world/autorace/scene/info[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPublishing entity deletions on [[0m[1;32m/world/autorace/scene/deletion[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPublishing state changes on [[0m[1;32m/world/autorace/state[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPublishing pose messages on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mpose/info[0m[1;32m][0m[1;32m[0m
+[gz-1] [1;32m[Msg] [0m[1;32mPublishing dynamic pose messages on [[0m[1;32m/world/autorace[0m[1;32m/[0m[1;32mdynamic_pose/info[0m[1;32m][0m[1;32m[0m
+[INFO] [gz-1]: process has finished cleanly [pid 5338]

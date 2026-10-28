@@ -1,0 +1,20 @@
+{
+  "kernel": "7.0.0-42-generic",
+  "config": "src/limo_autorace_sim/rviz/autorace.rviz",
+  "visual_checks": {
+    "global_status_ok": true,
+    "robot_mesh_visible": true,
+    "tf_axes_visible": true,
+    "rgb_track_visible": true,
+    "target_scan_visible": true,
+    "removed_target_scan_cleared": true
+  },
+  "scan_decay_seconds": 0.2,
+  "sensor_after_removal_forward_returns": 0,
+  "screenshots": {
+    "target": "screen.png",
+    "target_removed": "track_screen.png",
+    "before_decay_fix": "before_decay_fix.png"
+  },
+  "scope": "Visual inspection of RGB, RobotModel, TF and LaserScan. No depth Image panel in the default RViz configuration."
+}

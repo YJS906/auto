@@ -208,11 +208,37 @@ colcon test --packages-select limo_autorace_sim
 colcon test-result --verbose
 ```
 
-자동 물리 검사는 검증 전용 고정 명령 시퀀스이며 자율주행 알고리즘이 아닙니다. 명령 발행기를 여러 개 동시에 켜지 마십시오. 사용자 변경 토픽/치수에 맞춰 시험 스크립트의 기본 기대값도 조정해야 합니다. 기본 아커만용 시험이므로 차동모드에서 조향 관절 검사를 실행하지 마십시오.
+자동 물리 검사는 검증 전용 고정 명령 시퀀스이며 자율주행 알고리즘이 아닙니다. 명령 발행기를 여러 개 동시에 켜지 마십시오. 사용자 변경 토픽/치수에 맞춰 시험 스크립트의 기본 기대값도 조정해야 합니다. 아커만 시험은 기본값이며 차동모드에서는 `smoke_test --mode diff`를 사용합니다. 차동 시험은 조향 관절 대신 좌우 바퀴 반대 회전, 차체의 실제 제자리 회전과 입력 중단 후 회전 정지를 확인합니다.
 
 rosbag에는 원본 영상도 포함되어 수십 초에 수백 MB가 될 수 있습니다. 기록 기본 토픽은 `tools/record.sh`에 명시되어 있어 실차 remapping 후 함께 수정하십시오. 재생은 시뮬레이터를 종료한 별도 도메인에서 수행하십시오. 기록된 `/clock`을 재생하는 경우 `ros2 bag play BAG`로 재생하고 추가 `--clock`을 사용하지 않습니다.
 
 실제 실행 증거와 미검증 항목은 [검증 결과](docs/VALIDATION.md), 실측해야 할 값은 [모델 점검](docs/MODEL_AUDIT.md), 버전·라이선스는 [출처](docs/SOURCES.md)를 참고하십시오.
+
+## 차동구동·선택 센서 검증
+
+현재 차동구동, 깊이 카메라·LiDAR, RViz 실제 화면까지 검증했습니다. 차동구동에서 바퀴만 회전하고 차체가 돌지 않던 문제는 바퀴 마찰 방향과 측면 미끄럼 설정을 수정해 해결했습니다. `vehicle.yaml`의 `diff_lateral_slip: 1.0`은 차동모드에서만 사용하는 **임시 모델값**이며 실차 타이어 측정값은 아닙니다.
+
+```bash
+source tools/env.sh
+# 별도 ROS 도메인 75에서 검사마다 새로운 시뮬레이터 실행·종료
+# NVIDIA 이외 GPU에서는 --nvidia를 생략
+python3 tools/run_extended_checks.py --nvidia
+
+# 이미 실행 중인 차동모드 시뮬레이터의 주행 검사 (차량이 움직임)
+ros2 run limo_autorace_sim smoke_test --mode diff --output reports/manual_diff
+```
+
+전체 검사는 차동구동 23개, 아커만 회귀 15개, 선택 센서 14개 항목입니다. `reports/extended/summary.json`에 결과를 기록합니다. 기본 치수·센서 위치·토픽·스폰을 전제로 한 시험입니다. 사용자 설정을 바꾼 경우 시험 기대값도 조정해야 합니다.
+
+선택 센서 시험은 깊이 카메라와 LiDAR를 켠 별도 설정을 생성하고, 정지한 차량 앞에 시험용 상자를 추가해 알려진 거리와 측정값을 비교합니다. 실제 기본 트랙에는 이 상자가 추가되지 않습니다. 기본 `sensors.yaml`에서는 두 센서가 계속 꺼져 있습니다.
+
+```bash
+# 저장된 검증용 센서 설정으로 RViz의 RGB 영상·차량·TF·Scan 보기
+./tools/run_sim.sh gui:=false rviz:=true \
+  sensor_config:="$PWD/reports/extended/sensors/enabled_sensors.yaml"
+```
+
+RViz의 기본 설정은 RGB와 LaserScan 표시를 포함합니다. Scan 점은 0.2초 후 만료되어 제거된 장애물의 이전 점군이 계속 남지 않도록 했습니다. 깊이 영상 자체는 `/camera/depth/image_raw`에 32FC1로 발행되며, 검증용 원시 배열·미리보기는 `reports/extended/sensors/`에 있습니다. RViz 화면 근거와 남은 실차 보정 범위는 [검증 결과](docs/VALIDATION.md)를 참고하십시오.
 
 ## NVIDIA로 headless 실행
 
@@ -228,7 +254,7 @@ __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia \
 
 ## 문제 해결
 
-- **GPU**: RTX 4060 드라이버 문제를 해결했습니다. 현재 커널 `7.0.0-34-generic`에 NVIDIA `595.99.02` DKMS 모듈을 설치했고, 재부팅 없이 `nvidia-smi`와 RTX 4060 기반 headless 카메라·주행 시험 15개 항목이 통과했습니다. 이전 실패 원인은 현재 커널용 모듈 누락이었습니다. 근거는 `reports/nvidia/`입니다. AMD Radeon 780M 렌더링도 기존 시험에서 통과했습니다. GPU가 없는 환경의 소프트웨어 렌더링은 미검증입니다.
+- **GPU**: RTX 4060 드라이버 문제를 해결했습니다. 복구 당시 커널 `7.0.0-34-generic`에 NVIDIA `595.99.02` DKMS 모듈을 설치했고, 재부팅 없이 `nvidia-smi`와 RTX 4060 기반 headless 카메라·주행 시험 15개 항목이 통과했습니다. 이전 실패 원인은 현재 커널용 모듈 누락이었습니다. 이후 커널 `7.0.0-42-generic`로 재부팅한 상태에서도 추가 검증을 통과했습니다. 근거는 `reports/nvidia/`, `reports/extended/`입니다. AMD Radeon 780M 렌더링도 기존 시험에서 통과했습니다. GPU가 없는 환경의 소프트웨어 렌더링은 미검증입니다.
 - **GUI/Wayland 문제**: `QT_QPA_PLATFORM=xcb ./tools/run_sim.sh` 또는 `gui:=false`를 사용하십시오. 첫 렌더링은 몇 초 지연될 수 있습니다.
 - **차가 안 움직임**: 시뮬레이션 Play 상태, 도메인/partition 일치, 비상 정지 latch, `/clock`, 0.35초 이내 반복 명령을 확인합니다. 아커만에서 속도 0의 요레이트 명령은 제자리 회전시키지 않습니다.
 - **영상이 없음**: `ros2 topic hz /camera/color/image_raw`, `reports` 또는 launch 로그, GPU EGL 지원을 확인합니다. 센서 토픽은 best effort QoS입니다. launch 없이 노드만 실행하면 `/clock`이 없어 작동하지 않습니다.

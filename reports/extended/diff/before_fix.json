@@ -1,0 +1,86 @@
+{
+  "mode": "diff",
+  "checks": {
+    "required_topics": true,
+    "clock_monotonic": true,
+    "contact_height": true,
+    "forward_motion": true,
+    "left_yaw_positive": false,
+    "right_yaw_negative": false,
+    "stops": true,
+    "command_timeout_stops": true,
+    "optical_frame": true,
+    "camera_info_dimensions": true,
+    "camera_intrinsics": true,
+    "matched_image_info_timestamps": true,
+    "tf_connected": true,
+    "front_wheels_rotate": true,
+    "no_steering_joints": true,
+    "spin_left_yaw": false,
+    "spin_left_centre_drift": true,
+    "spin_left_opposite_wheels": true,
+    "spin_right_yaw": false,
+    "spin_right_centre_drift": true,
+    "spin_right_opposite_wheels": true
+  },
+  "counts": {
+    "imu": 2312,
+    "joints": 23085,
+    "info": 463,
+    "odom": 1155,
+    "truth": 679,
+    "image": 460
+  },
+  "tf": [
+    [
+      "base_link",
+      "base_footprint"
+    ],
+    [
+      "base_link",
+      "camera_link"
+    ],
+    [
+      "base_link",
+      "front_left_wheel_link"
+    ],
+    [
+      "base_link",
+      "front_right_wheel_link"
+    ],
+    [
+      "base_link",
+      "imu_link"
+    ],
+    [
+      "base_link",
+      "rear_left_wheel_link"
+    ],
+    [
+      "base_link",
+      "rear_right_wheel_link"
+    ],
+    [
+      "camera_link",
+      "camera_optical_frame"
+    ],
+    [
+      "odom",
+      "base_link"
+    ]
+  ],
+  "travel_m": 0.6845029976470942,
+  "left_yaw_rad": 1.239575818553689e-06,
+  "right_yaw_rad": -1.2429081991621128e-06,
+  "z_range_m": [
+    0.04498355334696996,
+    0.04499999585138807
+  ],
+  "camera_frame": "camera_optical_frame",
+  "clock_end": 23.116,
+  "limitation": "Nominal CAD and source-model geometry, not measured real Pro; visual lane visibility requires image review",
+  "spin_yaw_rad": {
+    "spin_left": 0.0,
+    "spin_right": 0.0
+  }
+}

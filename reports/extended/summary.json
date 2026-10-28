@@ -1,0 +1,76 @@
+{
+  "kernel": "7.0.0-42-generic",
+  "nvidia_requested": true,
+  "results": {
+    "diff": {
+      "exit_code": 0,
+      "checks": {
+        "required_topics": true,
+        "clock_monotonic": true,
+        "contact_height": true,
+        "forward_motion": true,
+        "left_yaw_positive": true,
+        "right_yaw_negative": true,
+        "stops": true,
+        "command_timeout_stops": true,
+        "optical_frame": true,
+        "camera_info_dimensions": true,
+        "camera_intrinsics": true,
+        "matched_image_info_timestamps": true,
+        "tf_connected": true,
+        "front_wheels_rotate": true,
+        "no_steering_joints": true,
+        "spin_left_yaw": true,
+        "spin_left_centre_drift": true,
+        "spin_left_opposite_wheels": true,
+        "spin_right_yaw": true,
+        "spin_right_centre_drift": true,
+        "spin_right_opposite_wheels": true,
+        "spin_timeout_stops_rotation": true,
+        "spin_timeout_stops_translation": true
+      },
+      "passed": true
+    },
+    "ackermann": {
+      "exit_code": 0,
+      "checks": {
+        "required_topics": true,
+        "clock_monotonic": true,
+        "contact_height": true,
+        "forward_motion": true,
+        "left_yaw_positive": true,
+        "right_yaw_negative": true,
+        "stops": true,
+        "command_timeout_stops": true,
+        "optical_frame": true,
+        "camera_info_dimensions": true,
+        "camera_intrinsics": true,
+        "matched_image_info_timestamps": true,
+        "tf_connected": true,
+        "front_wheels_rotate": true,
+        "front_wheels_steer_both_ways": true
+      },
+      "passed": true
+    },
+    "sensors": {
+      "exit_code": 0,
+      "checks": {
+        "depth_32FC1_320x240": true,
+        "depth_info_dimensions_intrinsics": true,
+        "optical_and_laser_frames": true,
+        "static_tf_connected": true,
+        "depth_info_capture_stamps_match": true,
+        "sensor_rates": true,
+        "timestamps_increase": true,
+        "scan_360_samples_and_full_circle": true,
+        "scan_range_limits": true,
+        "flat_track_no_forward_lidar_obstacles": true,
+        "depth_observes_floor": true,
+        "lidar_measures_target": true,
+        "depth_measures_target": true,
+        "depth_changes_for_target": true
+      },
+      "passed": true
+    }
+  }
+}

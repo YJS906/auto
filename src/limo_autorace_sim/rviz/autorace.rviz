@@ -30,6 +30,7 @@ Visualization Manager:
     - Class: rviz_default_plugins/LaserScan
       Name: Scan
       Enabled: true
+      Decay Time: 0.2
       Topic:
         Value: /scan
         Reliability Policy: Best Effort

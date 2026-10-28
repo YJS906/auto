@@ -1,0 +1,103 @@
+{
+  "checks": {
+    "depth_32FC1_320x240": true,
+    "depth_info_dimensions_intrinsics": true,
+    "optical_and_laser_frames": true,
+    "static_tf_connected": true,
+    "depth_info_capture_stamps_match": true,
+    "sensor_rates": true,
+    "timestamps_increase": true,
+    "scan_360_samples_and_full_circle": true,
+    "scan_range_limits": true,
+    "flat_track_no_forward_lidar_obstacles": true,
+    "depth_observes_floor": true,
+    "lidar_measures_target": true,
+    "depth_measures_target": true,
+    "depth_changes_for_target": true
+  },
+  "baseline": {
+    "encoding": "32FC1",
+    "width": 320,
+    "height": 240,
+    "depth_frame": "depth_optical_frame",
+    "info_frame": "depth_optical_frame",
+    "scan_frame": "laser_link",
+    "scan_samples": 360,
+    "depth_finite_fraction": 0.6880729166666667,
+    "centre_depth_m": 1.1095889806747437,
+    "front_returns": 0,
+    "centre_scan_m": null,
+    "rates_hz": {
+      "depth": 9.999999999999991,
+      "info": 9.999999999999991,
+      "scan": 9.999999999999991,
+      "rgb": 19.999999999999982
+    },
+    "counts": {
+      "depth": 32,
+      "info": 32,
+      "scan": 32,
+      "rgb": 60
+    },
+    "timestamps_increase": true,
+    "matched_depth_info_stamps": 32
+  },
+  "target": {
+    "encoding": "32FC1",
+    "width": 320,
+    "height": 240,
+    "depth_frame": "depth_optical_frame",
+    "info_frame": "depth_optical_frame",
+    "scan_frame": "laser_link",
+    "scan_samples": 360,
+    "depth_finite_fraction": 0.9542838541666666,
+    "centre_depth_m": 0.7431021928787231,
+    "front_returns": 40,
+    "centre_scan_m": 0.8021285533905029,
+    "rates_hz": {
+      "rgb": 20.00000000000007,
+      "depth": 10.000000000000036,
+      "info": 10.000000000000036,
+      "scan": 10.000000000000036
+    },
+    "counts": {
+      "rgb": 60,
+      "depth": 31,
+      "info": 31,
+      "scan": 31
+    },
+    "timestamps_increase": true,
+    "matched_depth_info_stamps": 31
+  },
+  "tf": [
+    [
+      "base_link",
+      "base_footprint"
+    ],
+    [
+      "base_link",
+      "camera_link"
+    ],
+    [
+      "base_link",
+      "depth_link"
+    ],
+    [
+      "base_link",
+      "imu_link"
+    ],
+    [
+      "base_link",
+      "laser_link"
+    ],
+    [
+      "camera_link",
+      "camera_optical_frame"
+    ],
+    [
+      "depth_link",
+      "depth_optical_frame"
+    ]
+  ],
+  "limitation": "Default spawn and sensor geometry only; no real sensor calibration."
+}

@@ -14,5 +14,7 @@ steering_joint_velocity: 1.5    # rad/s, provisional
 steer_p_gain: 8.0               # native joint velocity feedback gain, provisional
 wheel_friction: 0.9
 wheel_slip: 0.0
+# Four fixed wheels need lateral scrub to turn. Provisional, not a tire measurement.
+diff_lateral_slip: 1.0
 wheel_effort: 5.0
 mesh_body_scale: [1.0, 1.0, 1.0] # exterior only; no assertion of Pro geometry
