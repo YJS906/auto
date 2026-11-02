@@ -1,0 +1,224 @@
+{
+  "host": {
+    "system": "Linux",
+    "node": "a-Yoga-Slim-7-Pro-14ITL5",
+    "release": "7.0.0-42-generic",
+    "version": "#42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "start": [
+    4.5,
+    4.65,
+    3.141592653589793
+  ],
+  "relocate": [
+    1.9,
+    5.57,
+    0.05
+  ],
+  "checks": {
+    "blank_start_not_ready": true,
+    "guard_blocks_unlocalized_command": true,
+    "blackout_loses_readiness": true,
+    "guard_blocks_lost_command": true,
+    "kidnap_loses_readiness": true,
+    "unknown_start_below_5cm_2deg": true,
+    "blackout_recovery_below_5cm_2deg": true,
+    "kidnap_recovery_below_5cm_2deg": true,
+    "guard_brakes_on_missing_heartbeat": true
+  },
+  "results": {
+    "unknown_start": {
+      "acquisition_sim_seconds": 5.065999999999999,
+      "acquisition_wall_seconds": 5.104991579000853,
+      "settle_sim_seconds": 1,
+      "position_m": 0.0068562487438279165,
+      "yaw_deg": 0.1801889670538422,
+      "truth": [
+        9.078,
+        4.499999999989192,
+        4.649999999999944,
+        3.1415926535889502
+      ],
+      "estimate": [
+        9.08,
+        4.505554835042415,
+        4.654018949411013,
+        -3.1384477628397796
+      ],
+      "diagnostic": {
+        "state": "TRACKING",
+        "received": "119",
+        "processed": "21",
+        "accepted": "14",
+        "rejected": "7",
+        "features": "800",
+        "rmse_m": "0.001634",
+        "inlier_ratio": "1.000000",
+        "min_eigenvalue": "0.005938",
+        "extraction_ms": "0.456052",
+        "matching_ms": "0.534077",
+        "capture_to_result_sim_ms": "38.000000",
+        "visual_age_sim_s": "0.038000",
+        "global_score_m": "0.002033",
+        "global_margin_m": "0.023017",
+        "global_candidates": "13",
+        "confirmation_count": "0",
+        "global_search_ms": "200.247388",
+        "global_searches": "8",
+        "message": "tracking"
+      }
+    },
+    "blackout_recovery": {
+      "acquisition_sim_seconds": 4.952,
+      "acquisition_wall_seconds": 4.96306783,
+      "settle_sim_seconds": 1,
+      "position_m": 0.006761436210001711,
+      "yaw_deg": 0.1766119480550187,
+      "truth": [
+        17.544,
+        4.499999999989192,
+        4.649999999999944,
+        3.1415926535889502
+      ],
+      "estimate": [
+        17.56,
+        4.505533438426787,
+        4.653885624618878,
+        -3.138510193598715
+      ],
+      "diagnostic": {
+        "state": "TRACKING",
+        "received": "225",
+        "processed": "49",
+        "accepted": "31",
+        "rejected": "18",
+        "features": "800",
+        "rmse_m": "0.001634",
+        "inlier_ratio": "1.000000",
+        "min_eigenvalue": "0.005936",
+        "extraction_ms": "0.302971",
+        "matching_ms": "0.423350",
+        "capture_to_result_sim_ms": "60.000000",
+        "visual_age_sim_s": "0.061000",
+        "global_score_m": "0.002032",
+        "global_margin_m": "0.023016",
+        "global_candidates": "13",
+        "confirmation_count": "0",
+        "global_search_ms": "190.826129",
+        "global_searches": "15",
+        "message": "tracking"
+      }
+    },
+    "kidnap_detection": {
+      "sim_seconds": 0.5630000000000024,
+      "wall_seconds": 0.6668344170011551
+    },
+    "kidnap_recovery": {
+      "acquisition_sim_seconds": 2.6159999999999997,
+      "acquisition_wall_seconds": 2.627154256999347,
+      "settle_sim_seconds": 1,
+      "position_m": 0.010061762838809574,
+      "yaw_deg": 0.6176209663355522,
+      "truth": [
+        21.726,
+        1.9000000000108757,
+        5.5700000000005145,
+        0.05
+      ],
+      "estimate": [
+        21.72,
+        1.8966744968270817,
+        5.5605036796605605,
+        0.060779519391904444
+      ],
+      "diagnostic": {
+        "state": "TRACKING",
+        "received": "288",
+        "processed": "73",
+        "accepted": "48",
+        "rejected": "25",
+        "features": "800",
+        "rmse_m": "0.002117",
+        "inlier_ratio": "1.000000",
+        "min_eigenvalue": "0.006946",
+        "extraction_ms": "0.398181",
+        "matching_ms": "0.759329",
+        "capture_to_result_sim_ms": "74.000000",
+        "visual_age_sim_s": "0.074000",
+        "global_score_m": "0.006261",
+        "global_margin_m": "0.011039",
+        "global_candidates": "8",
+        "confirmation_count": "0",
+        "global_search_ms": "236.768100",
+        "global_searches": "18",
+        "message": "tracking"
+      }
+    }
+  },
+  "global_search_wall_ms": {
+    "mean": 179.80558969230768,
+    "rmse": 182.8302920755742,
+    "p50": 188.861907,
+    "p95": 219.21168119999996,
+    "max": 236.7681
+  },
+  "states": [
+    {
+      "phase": "startup",
+      "t": 0.0,
+      "wall": 12314.337533344,
+      "state": "SEARCHING"
+    },
+    {
+      "phase": "unknown_start",
+      "t": 3.3350000000000004,
+      "wall": 12340.206128901,
+      "state": "CONFIRMING"
+    },
+    {
+      "phase": "unknown_start",
+      "t": 8.085,
+      "wall": 12344.992792213,
+      "state": "TRACKING"
+    },
+    {
+      "phase": "blackout",
+      "t": 9.609,
+      "wall": 12346.523980449,
+      "state": "LOST"
+    },
+    {
+      "phase": "blackout_recovery",
+      "t": 11.796000000000001,
+      "wall": 12348.718265369,
+      "state": "CONFIRMING"
+    },
+    {
+      "phase": "blackout_recovery",
+      "t": 16.551000000000002,
+      "wall": 12353.484471914,
+      "state": "TRACKING"
+    },
+    {
+      "phase": "kidnap_recovery",
+      "t": 18.124000000000002,
+      "wall": 12355.161379923,
+      "state": "LOST"
+    },
+    {
+      "phase": "kidnap_recovery",
+      "t": 18.313000000000002,
+      "wall": 12355.351073417,
+      "state": "CONFIRMING"
+    },
+    {
+      "phase": "kidnap_recovery",
+      "t": 20.729000000000003,
+      "wall": 12357.777247573,
+      "state": "TRACKING"
+    }
+  ],
+  "limitation": "Static distinctive poses and rendered camera on host; no real lift dynamics, full-course coverage or ARM performance certification. set_pose is fault injection only."
+}

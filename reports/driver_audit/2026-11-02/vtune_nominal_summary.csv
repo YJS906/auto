@@ -1,0 +1,31 @@
+Hierarchy Level	Metric Name	Metric Value
+0	Elapsed Time	8.146922
+1	CPU Time	0.320000
+2	Effective Time	0.320000
+2	Spin Time	0.0
+2	Overhead Time	0.0
+1	Total Thread Count	15
+1	Paused Time	0.0
+0	Top Hotspots	
+0	Function	Module	CPU Time	% of CPU Time(%)
+0	operator new	libc++abi.so	0.040003	12.5
+0	_dl_open	ld-linux-x86-64.so.2	0.040003	12.5
+0	memmove	libc-dynamic.so	0.020002	6.3
+0	__cxa_demangle	libc++abi.so	0.020001	6.3
+0	read	limo_base	0.020000	6.2
+0	[Others]	N/A	0.179991	56.2
+0	Collection and Platform Info	
+1	Application Command Line	/tmp/limo-driver-audit/install/limo_base/lib/limo_base/limo_base "--ros-args" "-p" "port_name:=shm/ttyLimoAudit_39851" 
+1	Operating System	7.0.0-42-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=24.04 DISTRIB_CODENAME=noble DISTRIB_DESCRIPTION="Ubuntu 24.04.5 LTS"
+1	Computer Name	a-Yoga-Slim-7-Pro-14ITL5
+1	Result Size	5244919
+1	Collection start time	16:27:38 01/11/2026 UTC
+1	Collection stop time	16:27:48 01/11/2026 UTC
+1	Collector Type	User-mode sampling and tracing
+1	CPU	
+2	Name	Intel(R) microarchitecture code named Tigerlake
+2	Frequency	2419200195
+2	Logical CPU Count	8
+2	Cache Allocation Technology	
+3	Level 2 capability	available
+3	Level 3 capability	not detected

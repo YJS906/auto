@@ -1,0 +1,13 @@
+settle
+forward
+occlusion
+recovery
+Traceback (most recent call last):
+  File "/home/a/2026autorace/tools/run_localization_benchmark.py", line 288, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/a/2026autorace/tools/run_localization_benchmark.py", line 246, in main
+    node.run_phase(phase, duration, speed, yaw_rate)
+  File "/home/a/2026autorace/tools/run_localization_benchmark.py", line 131, in run_phase
+    raise TimeoutError(f'No unique relocalization while stopped in {name}: {self.ready}')
+TimeoutError: No unique relocalization while stopped in recovery: {'ipm_distance': False, 'ipm_icp': False, 'rgbd_distance': True, 'rgbd_icp': True}

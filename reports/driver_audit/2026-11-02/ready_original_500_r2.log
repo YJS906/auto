@@ -1,0 +1,11 @@
+Loading parameters: 
+- port name: shm/ttyLimoAudit_45778
+- odom frame name: odom
+- base frame name: base_link
+- odom topic name: 0
+[INFO] [1793551165.492611369] [limo_base]: connet the serial port:'/dev/shm/ttyLimoAudit_45778'
+[INFO] [1793551165.492851712] [limo_base]: enableCommandedMode :
+[INFO] [1793551165.492871890] [limo_base]: Open the serial port:'/dev/shm/ttyLimoAudit_45778'
+[INFO] [1793551173.201629099] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+terminate called without an active exception
+/tmp/limo-driver-audit/install/limo_base/lib/limo_base/limo_base: Aborted

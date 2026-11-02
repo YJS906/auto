@@ -1,0 +1,82 @@
+Starting >>> limo_autorace_sim
+UpdateCTestConfiguration  from :/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+Parse Config file:/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+   Site: a-Yoga-Slim-7-Pro-14ITL5
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261101-1541 - Experimental
+UpdateCTestConfiguration  from :/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+Parse Config file:/home/a/2026autorace/build/limo_autorace_sim/CTestConfiguration.ini
+Test project /home/a/2026autorace/build/limo_autorace_sim
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: core
+
+1: Test command: /usr/bin/python3 "-u" "/opt/ros/jazzy/share/ament_cmake_test/cmake/run_test.py" "/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml" "--package-name" "limo_autorace_sim" "--output-file" "/home/a/2026autorace/build/limo_autorace_sim/ament_cmake_pytest/core.txt" "--command" "/usr/bin/python3" "-u" "-m" "pytest" "/home/a/2026autorace/src/limo_autorace_sim/test/test_core.py" "-o" "cache_dir=/home/a/2026autorace/build/limo_autorace_sim/ament_cmake_pytest/core/.cache" "--junit-xml=/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml" "--junit-prefix=limo_autorace_sim"
+1: Working Directory: /home/a/2026autorace/build/limo_autorace_sim
+1: Test timeout computed to be: 60
+1: -- run_test.py: invoking following command in '/home/a/2026autorace/build/limo_autorace_sim':
+1:  - /usr/bin/python3 -u -m pytest /home/a/2026autorace/src/limo_autorace_sim/test/test_core.py -o cache_dir=/home/a/2026autorace/build/limo_autorace_sim/ament_cmake_pytest/core/.cache --junit-xml=/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml --junit-prefix=limo_autorace_sim
+1: ============================= test session starts ==============================
+1: platform linux -- Python 3.12.3, pytest-7.4.4, pluggy-1.4.0
+1: cachedir: build/limo_autorace_sim/ament_cmake_pytest/core/.cache
+1: rootdir: /home/a/2026autorace
+1: plugins: ament-pep257-0.17.5, ament-flake8-0.17.5, ament-lint-0.17.5, ament-copyright-0.17.5, launch-testing-3.4.11, ament-xmllint-0.17.5, launch-testing-ros-0.26.12, colcon-core-0.21.3, cov-4.1.0
+1: collected 7 items
+1: 
+1: ../../src/limo_autorace_sim/test/test_core.py .......                    [100%]
+1: 
+1: - generated xml file: /home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml -
+1: ============================== 7 passed in 0.34s ===============================
+1: -- run_test.py: return code 0
+1: -- run_test.py: verify result file '/home/a/2026autorace/build/limo_autorace_sim/test_results/limo_autorace_sim/core.xunit.xml'
+1/1 Test #1: core .............................   Passed    0.85 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Label Time Summary:
+pytest    =   0.85 sec*proc (1 test)
+
+Total Test time (real) =   0.85 sec
+Finished <<< limo_autorace_sim [0.88s]
+Starting >>> limo_localization
+UpdateCTestConfiguration  from :/home/a/2026autorace/build/limo_localization/CTestConfiguration.ini
+Parse Config file:/home/a/2026autorace/build/limo_localization/CTestConfiguration.ini
+   Site: a-Yoga-Slim-7-Pro-14ITL5
+   Build name: (empty)
+ Add coverage exclude regular expressions.
+Create new tag: 20261101-1541 - Experimental
+UpdateCTestConfiguration  from :/home/a/2026autorace/build/limo_localization/CTestConfiguration.ini
+Parse Config file:/home/a/2026autorace/build/limo_localization/CTestConfiguration.ini
+Test project /home/a/2026autorace/build/limo_localization
+Constructing a list of tests
+Done constructing a list of tests
+Updating test list for fixtures
+Added 0 tests to meet fixture requirements
+Checking test dependency graph...
+Checking test dependency graph end
+test 1
+    Start 1: localization_core
+
+1: Test command: /home/a/2026autorace/build/limo_localization/localization_core_test
+1: Working Directory: /home/a/2026autorace/build/limo_localization
+1: Test timeout computed to be: 10000000
+1: icp error=0.0190816 yaw=0.00766084
+1: distance error=0.0133774 yaw=0.00767496
+1: global candidates=1 margin=0.148013
+1: global pose=1.10331,1.18703,0.208709
+1: All localization core checks passed
+1/1 Test #1: localization_core ................   Passed    0.08 sec
+
+100% tests passed, 0 tests failed out of 1
+
+Total Test time (real) =   0.08 sec
+Finished <<< limo_localization [0.11s]
+
+Summary: 2 packages finished [1.14s]
+Summary: 9 tests, 0 errors, 0 failures, 0 skipped

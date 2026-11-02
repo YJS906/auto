@@ -4,6 +4,8 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from std_srvs.srv import SetBool
+from std_msgs.msg import Bool
+from rclpy.qos import QoSProfile, DurabilityPolicy
 from .control import Envelope
 
 
@@ -17,6 +19,9 @@ class CommandGuard(Node):
         if self.env.mode not in ('ackermann', 'diff'):
             raise ValueError('mode must be ackermann or diff')
         self.timeout = self.declare_parameter('command_timeout', 0.35).value
+        self.require_localization = self.declare_parameter('require_localization', False).value
+        self.localized = False
+        self.localization_wall = -math.inf
         rate = self.declare_parameter('rate', 50.0).value
         self.target = (0.0, 0.0)
         self.received = -math.inf
@@ -25,6 +30,8 @@ class CommandGuard(Node):
         self.estop = False
         self.pub = self.create_publisher(Twist, '/sim/cmd_vel', 10)
         self.create_subscription(Twist, 'cmd_vel', self.command, 10)
+        self.create_subscription(Bool, '/localization/ready', self.localization,
+                                 QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL))
         self.create_service(SetBool, '~/emergency_stop', self.stop)
         self.create_timer(1/rate, self.tick)
 
@@ -44,6 +51,15 @@ class CommandGuard(Node):
         res.message = 'Emergency stop latched' if req.data else 'Released; send a fresh command'
         return res
 
+    def localization(self, msg):
+        if not self.require_localization:
+            return
+        if not msg.data or not self.localized:
+            self.target = (0.0, 0.0)
+            self.received = -math.inf
+        self.localized = msg.data
+        self.localization_wall = time.monotonic()
+
     def tick(self):
         now = self.get_clock().now().nanoseconds*1e-9
         if self.previous is None or now < self.previous:
@@ -54,6 +70,12 @@ class CommandGuard(Node):
         dt = min(max(now-self.previous, 0.0), 0.1)
         self.previous = now
         stale = now-self.received > self.timeout or time.monotonic()-self.received_wall > self.timeout
+        if self.require_localization:
+            if not self.localized or time.monotonic()-self.localization_wall > self.timeout:
+                stale = True
+                self.localized = False
+                self.target = (0.0, 0.0)
+                self.received = -math.inf
         target = (0.0, 0.0) if stale or self.estop else self.target
         if self.estop:
             self.env.reset()

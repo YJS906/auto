@@ -1,0 +1,11 @@
+/opt/ros/jazzy/lib/python3.12/site-packages/launch/logging/__init__.py:149: UserWarning: Cannot create a symlink to latest log directory: [Errno 17] File exists: '/home/a/.ros/log/2026-11-02-00-41-42-734500-a-Yoga-Slim-7-Pro-14ITL5-28662' -> '/home/a/.ros/log/latest'
+
+  warnings.warn(
+[INFO] [launch]: All log files can be found below /home/a/.ros/log/2026-11-02-00-41-42-734500-a-Yoga-Slim-7-Pro-14ITL5-28662
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [road_marking_localizer-1]: process started with pid [28679]
+[road_marking_localizer-1] [INFO] [1793547703.120985043] [road_marking_localizer]: ipm / distance, CPU OpenCV; no ground truth subscription
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [road_marking_localizer-1]: sending signal 'SIGINT' to process[road_marking_localizer-1]
+[road_marking_localizer-1] [INFO] [1793547748.907407234] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [road_marking_localizer-1]: process has finished cleanly [pid 28679]

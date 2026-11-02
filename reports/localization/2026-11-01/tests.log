@@ -1,0 +1,7 @@
+Starting >>> limo_autorace_sim
+Finished <<< limo_autorace_sim [0.75s]
+Starting >>> limo_localization
+Finished <<< limo_localization [0.13s]
+
+Summary: 2 packages finished [1.07s]
+Summary: 7 tests, 0 errors, 0 failures, 0 skipped

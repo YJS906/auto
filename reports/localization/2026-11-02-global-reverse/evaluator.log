@@ -1,0 +1,251 @@
+startup 0.0 {}
+{'phase': 'startup', 't': 0.0, 'wall': 12314.337533344, 'state': 'SEARCHING'}
+startup 0.003 {'state': 'SEARCHING', 'received': '0', 'processed': '0', 'accepted': '0', 'rejected': '0', 'features': '0', 'rmse_m': '0.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.000000', 'matching_ms': '0.000000', 'capture_to_result_sim_ms': '0.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '0', 'message': 'waiting for sensors'}
+startup 0.003 {'state': 'SEARCHING', 'received': '0', 'processed': '0', 'accepted': '0', 'rejected': '0', 'features': '0', 'rmse_m': '0.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.000000', 'matching_ms': '0.000000', 'capture_to_result_sim_ms': '0.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '0', 'message': 'waiting for sensors'}
+startup 0.003 {'state': 'SEARCHING', 'received': '0', 'processed': '0', 'accepted': '0', 'rejected': '0', 'features': '0', 'rmse_m': '0.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.000000', 'matching_ms': '0.000000', 'capture_to_result_sim_ms': '0.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '0', 'message': 'waiting for sensors'}
+startup 0.003 {'state': 'SEARCHING', 'received': '0', 'processed': '0', 'accepted': '0', 'rejected': '0', 'features': '0', 'rmse_m': '0.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.000000', 'matching_ms': '0.000000', 'capture_to_result_sim_ms': '0.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '0', 'message': 'waiting for sensors'}
+startup 0.035 {'state': 'SEARCHING', 'received': '0', 'processed': '0', 'accepted': '0', 'rejected': '0', 'features': '0', 'rmse_m': '0.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.000000', 'matching_ms': '0.000000', 'capture_to_result_sim_ms': '0.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '0', 'message': 'waiting for sensors'}
+unknown_start 3.035 {'state': 'SEARCHING', 'received': '38', 'processed': '3', 'accepted': '0', 'rejected': '3', 'features': '0', 'rmse_m': '1000000000.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.324338', 'matching_ms': '0.002407', 'capture_to_result_sim_ms': '61.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '3', 'message': 'ambiguous or insufficient global evidence'}
+{'phase': 'unknown_start', 't': 3.3350000000000004, 'wall': 12340.206128901, 'state': 'CONFIRMING'}
+unknown_start 8.007 {'state': 'CONFIRMING', 'received': '106', 'processed': '8', 'accepted': '0', 'rejected': '7', 'features': '800', 'rmse_m': '0.051405', 'inlier_ratio': '0.925000', 'min_eigenvalue': '0.018071', 'extraction_ms': '0.366836', 'matching_ms': '208.557496', 'capture_to_result_sim_ms': '256.000000', 'visual_age_sim_s': '1000000.000000', 'global_score_m': '0.002035', 'global_margin_m': '0.023026', 'global_candidates': '12', 'confirmation_count': '2', 'global_search_ms': '207.507402', 'global_searches': '7', 'message': 'confirming unique global hypothesis'}
+{'phase': 'unknown_start', 't': 8.085, 'wall': 12344.992792213, 'state': 'TRACKING'}
+unknown_start 8.1 {'state': 'TRACKING', 'received': '106', 'processed': '8', 'accepted': '1', 'rejected': '7', 'features': '800', 'rmse_m': '0.051409', 'inlier_ratio': '0.925000', 'min_eigenvalue': '0.018056', 'extraction_ms': '0.280686', 'matching_ms': '201.322275', 'capture_to_result_sim_ms': '235.000000', 'visual_age_sim_s': '0.235000', 'global_score_m': '0.002033', 'global_margin_m': '0.023017', 'global_candidates': '13', 'confirmation_count': '0', 'global_search_ms': '200.247388', 'global_searches': '8', 'message': 'tracking'}
+blackout 9.100000000000001 {'state': 'TRACKING', 'received': '119', 'processed': '21', 'accepted': '14', 'rejected': '7', 'features': '800', 'rmse_m': '0.001634', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.005938', 'extraction_ms': '0.456052', 'matching_ms': '0.534077', 'capture_to_result_sim_ms': '38.000000', 'visual_age_sim_s': '0.038000', 'global_score_m': '0.002033', 'global_margin_m': '0.023017', 'global_candidates': '13', 'confirmation_count': '0', 'global_search_ms': '200.247388', 'global_searches': '8', 'message': 'tracking'}
+{'phase': 'blackout', 't': 9.609, 'wall': 12346.523980449, 'state': 'LOST'}
+blackout 9.609 {'state': 'TRACKING', 'received': '124', 'processed': '26', 'accepted': '15', 'rejected': '11', 'features': '0', 'rmse_m': '1000000000.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.248264', 'matching_ms': '0.000331', 'capture_to_result_sim_ms': '42.000000', 'visual_age_sim_s': '0.492000', 'global_score_m': '0.002033', 'global_margin_m': '0.023017', 'global_candidates': '13', 'confirmation_count': '0', 'global_search_ms': '200.247388', 'global_searches': '8', 'message': 'visual update rejected; short prediction continues'}
+blackout_recovery 11.610000000000001 {'state': 'LOST', 'received': '146', 'processed': '29', 'accepted': '15', 'rejected': '14', 'features': '0', 'rmse_m': '1000000000.000000', 'inlier_ratio': '0.000000', 'min_eigenvalue': '0.000000', 'extraction_ms': '0.246019', 'matching_ms': '0.002270', 'capture_to_result_sim_ms': '118.000000', 'visual_age_sim_s': '2.472000', 'global_score_m': '0.150000', 'global_margin_m': '0.000000', 'global_candidates': '0', 'confirmation_count': '0', 'global_search_ms': '0.000000', 'global_searches': '10', 'message': 'ambiguous or insufficient global evidence'}
+{'phase': 'blackout_recovery', 't': 11.796000000000001, 'wall': 12348.718265369, 'state': 'CONFIRMING'}
+{'phase': 'blackout_recovery', 't': 16.551000000000002, 'wall': 12353.484471914, 'state': 'TRACKING'}
+blackout_recovery 16.561 {'state': 'TRACKING', 'received': '209', 'processed': '35', 'accepted': '17', 'rejected': '18', 'features': '800', 'rmse_m': '0.001688', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.006207', 'extraction_ms': '0.416387', 'matching_ms': '0.622469', 'capture_to_result_sim_ms': '51.000000', 'visual_age_sim_s': '0.051000', 'global_score_m': '0.002032', 'global_margin_m': '0.023016', 'global_candidates': '13', 'confirmation_count': '0', 'global_search_ms': '190.826129', 'global_searches': '15', 'message': 'tracking'}
+kidnap 17.786 {'state': 'TRACKING', 'received': '225', 'processed': '49', 'accepted': '31', 'rejected': '18', 'features': '800', 'rmse_m': '0.001634', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.005936', 'extraction_ms': '0.302971', 'matching_ms': '0.423350', 'capture_to_result_sim_ms': '60.000000', 'visual_age_sim_s': '0.061000', 'global_score_m': '0.002032', 'global_margin_m': '0.023016', 'global_candidates': '13', 'confirmation_count': '0', 'global_search_ms': '190.826129', 'global_searches': '15', 'message': 'tracking'}
+{'phase': 'kidnap_recovery', 't': 18.124000000000002, 'wall': 12355.161379923, 'state': 'LOST'}
+kidnap_recovery 18.124000000000002 {'state': 'TRACKING', 'received': '233', 'processed': '54', 'accepted': '32', 'rejected': '22', 'features': '800', 'rmse_m': '0.017020', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.025118', 'extraction_ms': '0.316775', 'matching_ms': '0.991373', 'capture_to_result_sim_ms': '58.000000', 'visual_age_sim_s': '0.507000', 'global_score_m': '0.002032', 'global_margin_m': '0.023016', 'global_candidates': '13', 'confirmation_count': '0', 'global_search_ms': '190.826129', 'global_searches': '15', 'message': 'visual update rejected; short prediction continues'}
+{'phase': 'kidnap_recovery', 't': 18.313000000000002, 'wall': 12355.351073417, 'state': 'CONFIRMING'}
+{'phase': 'kidnap_recovery', 't': 20.729000000000003, 'wall': 12357.777247573, 'state': 'TRACKING'}
+kidnap_recovery 20.741 {'state': 'TRACKING', 'received': '274', 'processed': '59', 'accepted': '34', 'rejected': '25', 'features': '800', 'rmse_m': '0.002610', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.009779', 'extraction_ms': '0.307017', 'matching_ms': '0.635264', 'capture_to_result_sim_ms': '30.000000', 'visual_age_sim_s': '0.030000', 'global_score_m': '0.006261', 'global_margin_m': '0.011039', 'global_candidates': '8', 'confirmation_count': '0', 'global_search_ms': '236.768100', 'global_searches': '18', 'message': 'tracking'}
+heartbeat_loss 21.740000000000002 {'state': 'TRACKING', 'received': '288', 'processed': '73', 'accepted': '48', 'rejected': '25', 'features': '800', 'rmse_m': '0.002117', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.006946', 'extraction_ms': '0.398181', 'matching_ms': '0.759329', 'capture_to_result_sim_ms': '74.000000', 'visual_age_sim_s': '0.074000', 'global_score_m': '0.006261', 'global_margin_m': '0.011039', 'global_candidates': '8', 'confirmation_count': '0', 'global_search_ms': '236.768100', 'global_searches': '18', 'message': 'tracking'}
+heartbeat_loss 21.861 {'state': 'TRACKING', 'received': '291', 'processed': '75', 'accepted': '50', 'rejected': '25', 'features': '800', 'rmse_m': '0.002120', 'inlier_ratio': '1.000000', 'min_eigenvalue': '0.007648', 'extraction_ms': '0.423788', 'matching_ms': '0.870367', 'capture_to_result_sim_ms': '58.000000', 'visual_age_sim_s': '0.058000', 'global_score_m': '0.006261', 'global_margin_m': '0.011039', 'global_candidates': '8', 'confirmation_count': '0', 'global_search_ms': '236.768100', 'global_searches': '18', 'message': 'tracking'}
+{
+  "host": {
+    "system": "Linux",
+    "node": "a-Yoga-Slim-7-Pro-14ITL5",
+    "release": "7.0.0-42-generic",
+    "version": "#42~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Mon Oct 19 14:43:01 UTC 2",
+    "machine": "x86_64",
+    "processor": "x86_64"
+  },
+  "start": [
+    4.5,
+    4.65,
+    3.141592653589793
+  ],
+  "relocate": [
+    1.9,
+    5.57,
+    0.05
+  ],
+  "checks": {
+    "blank_start_not_ready": true,
+    "guard_blocks_unlocalized_command": true,
+    "blackout_loses_readiness": true,
+    "guard_blocks_lost_command": true,
+    "kidnap_loses_readiness": true,
+    "unknown_start_below_5cm_2deg": true,
+    "blackout_recovery_below_5cm_2deg": true,
+    "kidnap_recovery_below_5cm_2deg": true,
+    "guard_brakes_on_missing_heartbeat": true
+  },
+  "results": {
+    "unknown_start": {
+      "acquisition_sim_seconds": 5.065999999999999,
+      "acquisition_wall_seconds": 5.104991579000853,
+      "settle_sim_seconds": 1,
+      "position_m": 0.0068562487438279165,
+      "yaw_deg": 0.1801889670538422,
+      "truth": [
+        9.078,
+        4.499999999989192,
+        4.649999999999944,
+        3.1415926535889502
+      ],
+      "estimate": [
+        9.08,
+        4.505554835042415,
+        4.654018949411013,
+        -3.1384477628397796
+      ],
+      "diagnostic": {
+        "state": "TRACKING",
+        "received": "119",
+        "processed": "21",
+        "accepted": "14",
+        "rejected": "7",
+        "features": "800",
+        "rmse_m": "0.001634",
+        "inlier_ratio": "1.000000",
+        "min_eigenvalue": "0.005938",
+        "extraction_ms": "0.456052",
+        "matching_ms": "0.534077",
+        "capture_to_result_sim_ms": "38.000000",
+        "visual_age_sim_s": "0.038000",
+        "global_score_m": "0.002033",
+        "global_margin_m": "0.023017",
+        "global_candidates": "13",
+        "confirmation_count": "0",
+        "global_search_ms": "200.247388",
+        "global_searches": "8",
+        "message": "tracking"
+      }
+    },
+    "blackout_recovery": {
+      "acquisition_sim_seconds": 4.952,
+      "acquisition_wall_seconds": 4.96306783,
+      "settle_sim_seconds": 1,
+      "position_m": 0.006761436210001711,
+      "yaw_deg": 0.1766119480550187,
+      "truth": [
+        17.544,
+        4.499999999989192,
+        4.649999999999944,
+        3.1415926535889502
+      ],
+      "estimate": [
+        17.56,
+        4.505533438426787,
+        4.653885624618878,
+        -3.138510193598715
+      ],
+      "diagnostic": {
+        "state": "TRACKING",
+        "received": "225",
+        "processed": "49",
+        "accepted": "31",
+        "rejected": "18",
+        "features": "800",
+        "rmse_m": "0.001634",
+        "inlier_ratio": "1.000000",
+        "min_eigenvalue": "0.005936",
+        "extraction_ms": "0.302971",
+        "matching_ms": "0.423350",
+        "capture_to_result_sim_ms": "60.000000",
+        "visual_age_sim_s": "0.061000",
+        "global_score_m": "0.002032",
+        "global_margin_m": "0.023016",
+        "global_candidates": "13",
+        "confirmation_count": "0",
+        "global_search_ms": "190.826129",
+        "global_searches": "15",
+        "message": "tracking"
+      }
+    },
+    "kidnap_detection": {
+      "sim_seconds": 0.5630000000000024,
+      "wall_seconds": 0.6668344170011551
+    },
+    "kidnap_recovery": {
+      "acquisition_sim_seconds": 2.6159999999999997,
+      "acquisition_wall_seconds": 2.627154256999347,
+      "settle_sim_seconds": 1,
+      "position_m": 0.010061762838809574,
+      "yaw_deg": 0.6176209663355522,
+      "truth": [
+        21.726,
+        1.9000000000108757,
+        5.5700000000005145,
+        0.05
+      ],
+      "estimate": [
+        21.72,
+        1.8966744968270817,
+        5.5605036796605605,
+        0.060779519391904444
+      ],
+      "diagnostic": {
+        "state": "TRACKING",
+        "received": "288",
+        "processed": "73",
+        "accepted": "48",
+        "rejected": "25",
+        "features": "800",
+        "rmse_m": "0.002117",
+        "inlier_ratio": "1.000000",
+        "min_eigenvalue": "0.006946",
+        "extraction_ms": "0.398181",
+        "matching_ms": "0.759329",
+        "capture_to_result_sim_ms": "74.000000",
+        "visual_age_sim_s": "0.074000",
+        "global_score_m": "0.006261",
+        "global_margin_m": "0.011039",
+        "global_candidates": "8",
+        "confirmation_count": "0",
+        "global_search_ms": "236.768100",
+        "global_searches": "18",
+        "message": "tracking"
+      }
+    }
+  },
+  "global_search_wall_ms": {
+    "mean": 179.80558969230768,
+    "rmse": 182.8302920755742,
+    "p50": 188.861907,
+    "p95": 219.21168119999996,
+    "max": 236.7681
+  },
+  "states": [
+    {
+      "phase": "startup",
+      "t": 0.0,
+      "wall": 12314.337533344,
+      "state": "SEARCHING"
+    },
+    {
+      "phase": "unknown_start",
+      "t": 3.3350000000000004,
+      "wall": 12340.206128901,
+      "state": "CONFIRMING"
+    },
+    {
+      "phase": "unknown_start",
+      "t": 8.085,
+      "wall": 12344.992792213,
+      "state": "TRACKING"
+    },
+    {
+      "phase": "blackout",
+      "t": 9.609,
+      "wall": 12346.523980449,
+      "state": "LOST"
+    },
+    {
+      "phase": "blackout_recovery",
+      "t": 11.796000000000001,
+      "wall": 12348.718265369,
+      "state": "CONFIRMING"
+    },
+    {
+      "phase": "blackout_recovery",
+      "t": 16.551000000000002,
+      "wall": 12353.484471914,
+      "state": "TRACKING"
+    },
+    {
+      "phase": "kidnap_recovery",
+      "t": 18.124000000000002,
+      "wall": 12355.161379923,
+      "state": "LOST"
+    },
+    {
+      "phase": "kidnap_recovery",
+      "t": 18.313000000000002,
+      "wall": 12355.351073417,
+      "state": "CONFIRMING"
+    },
+    {
+      "phase": "kidnap_recovery",
+      "t": 20.729000000000003,
+      "wall": 12357.777247573,
+      "state": "TRACKING"
+    }
+  ],
+  "limitation": "Static distinctive poses and rendered camera on host; no real lift dynamics, full-course coverage or ARM performance certification. set_pose is fault injection only."
+}

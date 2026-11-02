@@ -48,3 +48,52 @@ def test_optical_axes_and_modes():
     rx=np.array([[1,0,0],[0,0,1],[0,-1,0]])
     rz=np.array([[0,1,0],[-1,0,0],[0,0,1]])
     assert np.allclose(rz@rx@np.array([0,0,1]),[1,0,0])
+
+
+@pytest.fixture
+def command_guard():
+    import rclpy
+    from limo_autorace_sim.command_guard import CommandGuard
+    rclpy.init(args=['--ros-args', '-p', 'require_localization:=true', '-r', '__ns:=/guard_test',
+                    '-r', '/sim/cmd_vel:=/guard_test/output',
+                    '-r', '/localization/ready:=/guard_test/ready'])
+    node = CommandGuard()
+    try:
+        yield node
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+
+
+def test_localization_timeout_brakes_and_requires_fresh_command(command_guard):
+    import time
+    from geometry_msgs.msg import Twist
+    from std_msgs.msg import Bool
+    node = command_guard
+    node.localization(Bool(data=True))
+    msg = Twist(); msg.linear.x = .2; node.command(msg)
+    node.env.speed = .05
+    node.localization_wall = time.monotonic()-1
+    node.previous = node.get_clock().now().nanoseconds*1e-9-.1
+    node.tick()
+    assert node.env.speed == 0
+    node.localization(Bool(data=True))
+    node.previous = node.get_clock().now().nanoseconds*1e-9-.1
+    node.tick()
+    assert node.env.speed == 0  # Old commands must not resume on heartbeat recovery.
+    node.command(msg)
+    node.previous = node.get_clock().now().nanoseconds*1e-9-.1
+    node.tick()
+    assert node.env.speed > 0
+
+
+def test_manual_mode_ignores_localization_gate(command_guard):
+    from geometry_msgs.msg import Twist
+    from std_msgs.msg import Bool
+    node = command_guard
+    node.require_localization = False
+    msg = Twist(); msg.linear.x = .2; node.command(msg)
+    node.localization(Bool(data=False))
+    node.previous = node.get_clock().now().nanoseconds*1e-9-.1
+    node.tick()
+    assert node.env.speed > 0

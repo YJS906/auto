@@ -1,0 +1,81 @@
+vtune: Collection started. To stop the collection, either press CTRL-C or enter from another console window: vtune -r /tmp/limo-driver-audit/vtune_vtune_nominal_50 -command stop.
+Loading parameters: 
+- port name: shm/ttyLimoAudit_39851
+- odom frame name: odom
+- base frame name: base_link
+- odom topic name: 0
+[INFO] [1793550459.722736230] [limo_base]: connet the serial port:'/dev/shm/ttyLimoAudit_39851'
+[INFO] [1793550459.723046086] [limo_base]: enableCommandedMode :
+[INFO] [1793550459.723100360] [limo_base]: Open the serial port:'/dev/shm/ttyLimoAudit_39851'
+[INFO] [1793550467.647537200] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+terminate called without an active exception
+vtune: Collection stopped.
+vtune: Using result path `/tmp/limo-driver-audit/vtune_vtune_nominal_50'
+vtune: Executing actions  0 %                                                  vtune: Executing actions  0 % Finalizing results                               vtune: Executing actions  0 % Finalizing the result                            vtune: Executing actions  0 % Clearing the database                            vtune: Executing actions  7 % Clearing the database                            vtune: Executing actions  7 % Loading raw data to the database                 vtune: Executing actions  7 % Loading 'systemcollector-39900-a-Yoga-Slim-7-Pro-vtune: Executing actions 12 % Loading 'systemcollector-39900-a-Yoga-Slim-7-Pro-vtune: Executing actions 12 % Loading '39900-39915.0.trace' file               vtune: Executing actions 12 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Updating precomputed scalar metrics              vtune: Executing actions 14 % Processing profile metrics and debug information vtune: Executing actions 19 % Processing profile metrics and debug information vtune: Executing actions 19 % Setting data model parameters                    vtune: Executing actions 19 % Resolving module symbols                         vtune: Executing actions 19 % Resolving information for `librmw_fastrtps_cpp.sovtune: Executing actions 19 % Resolving information for `librmw_implementation.vtune: Executing actions 19 % Resolving information for `libc-dynamic.so'      
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librmw_fastrtps_cpp.so'.
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librmw_implementation.so'.
+vtune: Executing actions 19 % Resolving information for `librosidl_typesupport_
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librosidl_typesupport_c.so'.
+vtune: Executing actions 19 % Resolving information for `librcl.so'            vtune: Executing actions 19 % Resolving information for `libc++.so'            
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librcl.so'.
+vtune: Executing actions 19 % Resolving information for `pinbin'               vtune: Executing actions 19 % Resolving information for `libc++abi.so'         vtune: Executing actions 20 % Resolving information for `libc++abi.so'         vtune: Executing actions 20 % Resolving information for `librcpputils.so'      
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librcpputils.so'.
+vtune: Executing actions 20 % Resolving information for `libstdc++.so.6'       vtune: Executing actions 20 % Resolving information for `libtpsstool.so'       
+vtune: Warning: Cannot locate debugging information for file `/lib/x86_64-linux-gnu/libstdc++.so.6'.
+vtune: Executing actions 20 % Resolving information for `librcl_logging_spdlog.
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librcl_logging_spdlog.so'.
+vtune: Executing actions 20 % Resolving information for `librcutils.so'        vtune: Executing actions 20 % Resolving information for `limo_base'            
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librcutils.so'.
+vtune: Executing actions 20 % Resolving information for `librclcpp.so'         
+vtune: Warning: Cannot locate debugging information for file `/opt/intel/oneapi/vtune/2026.4/lib64/libtpsstool.so'.
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librclcpp.so'.
+vtune: Executing actions 20 % Resolving information for `ld-linux-x86-64.so.2' vtune: Executing actions 20 % Resolving information for `libc.so.6'            vtune: Executing actions 21 % Resolving information for `libc.so.6'            vtune: Executing actions 21 % Resolving information for `libfastcdr.so.2'      
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/libfastcdr.so.2'.
+vtune: Executing actions 21 % Resolving information for `librmw_fastrtps_shared
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librmw_fastrtps_shared_cpp.so'.
+vtune: Executing actions 21 % Resolving information for `libsensor_msgs__rosidl
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so'.
+vtune: Executing actions 21 % Resolving information for dangling locations     vtune: Executing actions 21 % Resolving information for `libfastrtps.so.2.14'  
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/libfastrtps.so.2.14'.
+vtune: Executing actions 21 % Resolving information for `liblttng-ust.so.1'    
+vtune: Warning: Cannot locate debugging information for file `/lib/x86_64-linux-gnu/liblttng-ust.so.1'.
+vtune: Executing actions 21 % Resolving information for `librosidl_typesupport_
+vtune: Warning: Cannot locate debugging information for file `/opt/ros/jazzy/lib/librosidl_typesupport_cpp.so'.
+vtune: Executing actions 22 % Resolving information for `librosidl_typesupport_vtune: Executing actions 22 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving bottom user stack information          vtune: Executing actions 23 % Resolving thread name information                vtune: Executing actions 24 % Resolving thread name information                vtune: Executing actions 24 % Resolving call target names for dynamic code     vtune: Executing actions 25 % Resolving call target names for dynamic code     vtune: Executing actions 25 % Resolving interrupt name information             vtune: Executing actions 26 % Resolving interrupt name information             vtune: Executing actions 26 % Processing profile metrics and debug information vtune: Executing actions 28 % Processing profile metrics and debug information vtune: Executing actions 29 % Processing profile metrics and debug information vtune: Executing actions 30 % Processing profile metrics and debug information vtune: Executing actions 30 % Setting data model parameters                    vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 30 % Precomputing frequently used data                vtune: Executing actions 31 % Precomputing frequently used data                vtune: Executing actions 33 % Precomputing frequently used data                vtune: Executing actions 34 % Precomputing frequently used data                vtune: Executing actions 36 % Precomputing frequently used data                vtune: Executing actions 36 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Updating precomputed scalar metrics              vtune: Executing actions 37 % Discarding redundant overtime data               vtune: Executing actions 39 % Discarding redundant overtime data               vtune: Executing actions 39 % Saving the result                                vtune: Executing actions 41 % Saving the result                                vtune: Executing actions 42 % Saving the result                                vtune: Executing actions 49 % Saving the result                                vtune: Executing actions 50 % Saving the result                                vtune: Executing actions 50 % Generating a report                              vtune: Executing actions 50 % Setting data model parameters                    vtune: Executing actions 75 % Setting data model parameters                    vtune: Executing actions 75 % Generating a report                              Elapsed Time: 8.147s
+    CPU Time: 0.320s
+        Effective Time: 0.320s
+        Spin Time: 0s
+        Overhead Time: 0s
+    Total Thread Count: 15
+    Paused Time: 0s
+
+Top Hotspots
+Function        Module                CPU Time  % of CPU Time(%)
+--------------  --------------------  --------  ----------------
+operator new    libc++abi.so            0.040s             12.5%
+_dl_open        ld-linux-x86-64.so.2    0.040s             12.5%
+memmove         libc-dynamic.so         0.020s              6.3%
+__cxa_demangle  libc++abi.so            0.020s              6.3%
+read            limo_base               0.020s              6.2%
+[Others]        N/A                     0.180s             56.2%
+Collection and Platform Info
+    Application Command Line: /tmp/limo-driver-audit/install/limo_base/lib/limo_base/limo_base "--ros-args" "-p" "port_name:=shm/ttyLimoAudit_39851" 
+    Operating System: 7.0.0-42-generic DISTRIB_ID=Ubuntu DISTRIB_RELEASE=24.04 DISTRIB_CODENAME=noble DISTRIB_DESCRIPTION="Ubuntu 24.04.5 LTS"
+    Computer Name: a-Yoga-Slim-7-Pro-14ITL5
+    Result Size: 5.2 MB 
+    Collection start time: 16:27:38 01/11/2026 UTC
+    Collection stop time: 16:27:48 01/11/2026 UTC
+    Collector Type: User-mode sampling and tracing
+    CPU
+        Name: Intel(R) microarchitecture code named Tigerlake
+        Frequency: 2.419 GHz
+        Logical CPU Count: 8
+        Cache Allocation Technology
+            Level 2 capability: available
+            Level 3 capability: not detected
+
+If you want to skip descriptions of detected performance issues in the report,
+enter: vtune -report summary -report-knob show-issues=false -r <my_result_dir>.
+Alternatively, you may view the report in the csv format: vtune -report
+<report_name> -format=csv.
+vtune: Executing actions 100 % Generating a report                             vtune: Executing actions 100 % done                                            

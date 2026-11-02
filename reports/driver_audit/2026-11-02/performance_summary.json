@@ -1,0 +1,251 @@
+{
+  "method": "Three six-second PTY runs per group, perf wrapper, /proc user+system CPU delta after first 1.5s of input, one core = 100%. Counts verified against actual bytes injected.",
+  "original_50": {
+    "runs": [
+      {
+        "tag": "ready_original_50_r1",
+        "cpu_percent_one_core": 1.1174604333868432,
+        "injected_cycles": 300,
+        "actual_rate_hz": 50.0,
+        "messages_received": {
+          "odom": 300,
+          "imu": 300,
+          "status": 60
+        },
+        "rss_kib": 32036.0,
+        "latency_ms": {
+          "count": 300,
+          "median": 0.8381400002690498,
+          "p95": 2.0455979993130313,
+          "max": 2.4756689999776427
+        }
+      },
+      {
+        "tag": "ready_original_50_r2",
+        "cpu_percent_one_core": 1.3498419474450787,
+        "injected_cycles": 300,
+        "actual_rate_hz": 50.0,
+        "messages_received": {
+          "status": 60,
+          "odom": 300,
+          "imu": 300
+        },
+        "rss_kib": 31956.0,
+        "latency_ms": {
+          "count": 300,
+          "median": 0.8063940003921743,
+          "p95": 2.063305999399745,
+          "max": 2.928981000877684
+        }
+      },
+      {
+        "tag": "ready_original_50_r3",
+        "cpu_percent_one_core": 1.354360449876183,
+        "injected_cycles": 300,
+        "actual_rate_hz": 50.0,
+        "messages_received": {
+          "odom": 300,
+          "imu": 300,
+          "status": 60
+        },
+        "rss_kib": 31912.0,
+        "latency_ms": {
+          "count": 300,
+          "median": 0.8008080003492068,
+          "p95": 2.1845829996891553,
+          "max": 7.776767999530421
+        }
+      }
+    ],
+    "median_cpu_percent_one_core": 1.3498419474450787,
+    "min_cpu_percent_one_core": 1.1174604333868432,
+    "max_cpu_percent_one_core": 1.354360449876183,
+    "median_p95_synthetic_latency_ms": 2.063305999399745
+  },
+  "original_500": {
+    "runs": [
+      {
+        "tag": "ready_original_500_r1",
+        "cpu_percent_one_core": 8.348258387282671,
+        "injected_cycles": 3000,
+        "actual_rate_hz": 500.0,
+        "messages_received": {
+          "odom": 3000,
+          "imu": 3000,
+          "status": 600
+        },
+        "rss_kib": 31656.0,
+        "latency_ms": {
+          "count": 3000,
+          "median": 0.569716999962111,
+          "p95": 2.1065620003355434,
+          "max": 9.867532999123796
+        }
+      },
+      {
+        "tag": "ready_original_500_r2",
+        "cpu_percent_one_core": 8.92087429910131,
+        "injected_cycles": 2998,
+        "actual_rate_hz": 499.6666666666667,
+        "messages_received": {
+          "status": 600,
+          "odom": 2998,
+          "imu": 2998
+        },
+        "rss_kib": 31788.0,
+        "latency_ms": {
+          "count": 2998,
+          "median": 0.6743129997630604,
+          "p95": 2.191658000811003,
+          "max": 5.1891559996875
+        }
+      },
+      {
+        "tag": "ready_original_500_r3",
+        "cpu_percent_one_core": 8.990085433965497,
+        "injected_cycles": 2997,
+        "actual_rate_hz": 499.5,
+        "messages_received": {
+          "odom": 2997,
+          "imu": 2997,
+          "status": 600
+        },
+        "rss_kib": 31624.0,
+        "latency_ms": {
+          "count": 2997,
+          "median": 0.688280000758823,
+          "p95": 2.198496000346495,
+          "max": 2.740010000707116
+        }
+      }
+    ],
+    "median_cpu_percent_one_core": 8.92087429910131,
+    "min_cpu_percent_one_core": 8.348258387282671,
+    "max_cpu_percent_one_core": 8.990085433965497,
+    "median_p95_synthetic_latency_ms": 2.191658000811003
+  },
+  "batch_50": {
+    "runs": [
+      {
+        "tag": "ready_batch_50_r1",
+        "cpu_percent_one_core": 1.1244144055113259,
+        "injected_cycles": 300,
+        "actual_rate_hz": 50.0,
+        "messages_received": {
+          "odom": 300,
+          "imu": 300,
+          "status": 60
+        },
+        "rss_kib": 31608.0,
+        "latency_ms": {
+          "count": 300,
+          "median": 0.7526530007453403,
+          "p95": 1.8552140008978313,
+          "max": 2.3710780005785637
+        }
+      },
+      {
+        "tag": "ready_batch_50_r2",
+        "cpu_percent_one_core": 1.1215845461138816,
+        "injected_cycles": 300,
+        "actual_rate_hz": 50.0,
+        "messages_received": {
+          "status": 60,
+          "odom": 300,
+          "imu": 300
+        },
+        "rss_kib": 32112.0,
+        "latency_ms": {
+          "count": 300,
+          "median": 0.7986590007931227,
+          "p95": 1.8472669999027858,
+          "max": 2.5388309986738022
+        }
+      },
+      {
+        "tag": "ready_batch_50_r3",
+        "cpu_percent_one_core": 1.1265222275796232,
+        "injected_cycles": 300,
+        "actual_rate_hz": 50.0,
+        "messages_received": {
+          "odom": 300,
+          "imu": 300,
+          "status": 60
+        },
+        "rss_kib": 32108.0,
+        "latency_ms": {
+          "count": 300,
+          "median": 0.7725809991825372,
+          "p95": 1.4616989992646268,
+          "max": 2.5021069996000733
+        }
+      }
+    ],
+    "median_cpu_percent_one_core": 1.1244144055113259,
+    "min_cpu_percent_one_core": 1.1215845461138816,
+    "max_cpu_percent_one_core": 1.1265222275796232,
+    "median_p95_synthetic_latency_ms": 1.8472669999027858
+  },
+  "batch_500": {
+    "runs": [
+      {
+        "tag": "ready_batch_500_r1",
+        "cpu_percent_one_core": 6.747371564106124,
+        "injected_cycles": 3000,
+        "actual_rate_hz": 500.0,
+        "messages_received": {
+          "imu": 3000,
+          "status": 600,
+          "odom": 3000
+        },
+        "rss_kib": 31872.0,
+        "latency_ms": {
+          "count": 3000,
+          "median": 0.6138119988463586,
+          "p95": 1.9131549997837283,
+          "max": 2.707699999518809
+        }
+      },
+      {
+        "tag": "ready_batch_500_r2",
+        "cpu_percent_one_core": 7.174855190479667,
+        "injected_cycles": 3000,
+        "actual_rate_hz": 500.0,
+        "messages_received": {
+          "imu": 3000,
+          "status": 600,
+          "odom": 3000
+        },
+        "rss_kib": 31964.0,
+        "latency_ms": {
+          "count": 3000,
+          "median": 0.6456789997173473,
+          "p95": 2.158785000574426,
+          "max": 2.6385170003777603
+        }
+      },
+      {
+        "tag": "ready_batch_500_r3",
+        "cpu_percent_one_core": 7.220564127103504,
+        "injected_cycles": 2998,
+        "actual_rate_hz": 499.6666666666667,
+        "messages_received": {
+          "imu": 2998,
+          "status": 600,
+          "odom": 2998
+        },
+        "rss_kib": 31872.0,
+        "latency_ms": {
+          "count": 2998,
+          "median": 0.6409039997379296,
+          "p95": 2.206455999839818,
+          "max": 7.587786998556112
+        }
+      }
+    ],
+    "median_cpu_percent_one_core": 7.174855190479667,
+    "min_cpu_percent_one_core": 6.747371564106124,
+    "max_cpu_percent_one_core": 7.220564127103504,
+    "median_p95_synthetic_latency_ms": 2.158785000574426
+  }
+}

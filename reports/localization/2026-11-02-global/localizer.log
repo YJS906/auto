@@ -1,0 +1,8 @@
+[INFO] [launch]: All log files can be found below /home/a/.ros/log/2026-11-02-00-30-51-393717-a-Yoga-Slim-7-Pro-14ITL5-26049
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [road_marking_localizer-1]: process started with pid [26066]
+[road_marking_localizer-1] [INFO] [1793547051.774566196] [road_marking_localizer]: ipm / distance, CPU OpenCV; no ground truth subscription
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [road_marking_localizer-1]: sending signal 'SIGINT' to process[road_marking_localizer-1]
+[road_marking_localizer-1] [INFO] [1793547094.932162079] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [road_marking_localizer-1]: process has finished cleanly [pid 26066]

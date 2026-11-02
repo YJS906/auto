@@ -1,0 +1,10 @@
+{
+  "commit": "7ef355cd515e806b26f498d38bfe2abe4f3a9728",
+  "sha256": "1dd98fca8500a65f5ff7e3ef342c0331ced620a817dda923f752d49d060ec979",
+  "bytes": 24661,
+  "local_git_github_identical": true,
+  "vendor_status": "",
+  "host": "Linux-7.0.0-42-generic-x86_64-with-glibc2.39",
+  "vtune": "Intel(R) VTune(TM) Profiler 2026.4.0 (build 632893) Command Line Tool\nCopyright (C) 2009 Intel Corporation. All rights reserved.",
+  "build_note": "Unmodified source; temporary old-header-name shim includes tf2_geometry_msgs.hpp for Jazzy. RelWithDebInfo. No hardware attached."
+}

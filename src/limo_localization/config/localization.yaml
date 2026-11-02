@@ -1,0 +1,50 @@
+/**:
+  ros__parameters:
+    use_sim_time: true
+    matcher: distance  # distance | icp; both consume identical extracted points
+    projection: ipm   # ipm | rgbd; rgbd requires depth + its own CameraInfo and TF
+    processing_rate: 15.0
+    opencv_threads: 1
+    map_width: 10.0
+    map_height: 6.0
+    map_resolution: 0.01
+    map_frame: map
+    base_frame: base_link
+    publish_tf: true   # only map->odom; existing odom->base_link publisher stays
+    global_initialization: true  # no authoritative pose/TF until global confirmation
+    global_search_rate: 1.0      # wall Hz while unlocalized; tracking stays at processing_rate
+    global_audit_period: 2.0     # ROS seconds between whole-map checks while tracking
+    tracking_timeout: 0.8
+    confirmation_frames: 3
+    search_xy_step: 0.20
+    search_yaw_step: 0.2617993877991494
+    search_candidates: 32
+    search_score_margin: 0.004
+    search_max_score: 0.025
+    search_min_eigenvalue: 0.002
+    # Used only for explicit prior startup (global_initialization=false).
+    initial_x: 1.66
+    initial_y: 5.53
+    initial_yaw: 0.03
+    white_min: 160
+    max_chroma: 90
+    pixel_stride: 3
+    max_points: 800
+    min_points: 40
+    min_forward: 0.15
+    max_forward: 2.0
+    max_lateral: 1.2
+    ground_z: -0.045  # ground in base_link; MUST calibrate for the real vehicle TF
+    ground_tolerance: 0.025
+    max_tilt: 0.12
+    sync_tolerance: 0.060  # RGB 20Hz / depth 10Hz: nearest depth plus motion compensation
+    max_image_age: 0.5
+    iterations: 15
+    max_correspondence: 0.15
+    max_rmse: 0.035
+    min_inlier_ratio: 0.5
+    max_correction: 0.2
+    max_yaw_correction: 0.25
+    imu_weight: 0.8
+    velocity_noise: 0.03
+    yaw_rate_noise: 0.03

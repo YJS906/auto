@@ -1,0 +1,21 @@
+Function	CPU Time	CPU Time:Effective Time	CPU Time:Spin Time	CPU Time:Overhead Time	Module	Function (Full)	Source File	Start Address
+operator new	0.040003	0.040003	0.0	0.0	libc++abi.so	operator new(unsigned long)	[Unknown]	0x25000
+_dl_open	0.040003	0.040003	0.0	0.0	ld-linux-x86-64.so.2	_dl_open	dl-open.c	0xd0b0
+memmove	0.020002	0.020002	0.0	0.0	libc-dynamic.so	memmove	[Unknown]	0x69e90
+__cxa_demangle	0.020001	0.020001	0.0	0.0	libc++abi.so	__cxa_demangle	[Unknown]	0x21fe0
+eprosima::fastrtps::rtps::EDP::pairingReader	0.020000	0.020000	0.0	0.0	libfastrtps.so.2.14	eprosima::fastrtps::rtps::EDP::pairingReader(eprosima::fastrtps::rtps::RTPSReader*, eprosima::fastrtps::rtps::GUID_t const&, eprosima::fastrtps::rtps::ReaderProxyData const&)	[Unknown]	0x4c7530
+read	0.020000	0.020000	0.0	0.0	limo_base	read	unistd.h	0x7750a
+OS_BARESYSCALL_DoCallAsmIntel64Linux	0.019997	0.019997	0.0	0.0	libc-dynamic.so	OS_BARESYSCALL_DoCallAsmIntel64Linux	[Unknown]	0x80954
+eprosima::fastrtps::types::TypeIdentifier::_d	0.019997	0.019997	0.0	0.0	libfastrtps.so.2.14	eprosima::fastrtps::types::TypeIdentifier::_d(void) const	[Unknown]	0x43ffe0
+AgileX::LimoDriver::publishOdometry	0.010000	0.010000	0.0	0.0	limo_base	AgileX::LimoDriver::publishOdometry(double, double, double, double, double)	limo_driver.cpp	0x6fafe
+__GI___libc_read	0.010000	0.010000	0.0	0.0	libc.so.6	__GI___libc_read	read.c	0x11bd20
+___pthread_cond_clockwait64	0.010000	0.010000	0.0	0.0	libc.so.6	___pthread_cond_clockwait64	pthread_cond_wait.c	0x9bfe0
+___pthread_mutex_lock	0.010000	0.010000	0.0	0.0	libc.so.6	___pthread_mutex_lock	pthread_mutex_lock.c	0xa00d0
+___pthread_mutex_unlock	0.010000	0.010000	0.0	0.0	libc.so.6	___pthread_mutex_unlock	pthread_mutex_unlock.c	0xa1b50
+eprosima::fastcdr::Cdr::serialize_encapsulation	0.010000	0.010000	0.0	0.0	libfastcdr.so.2	eprosima::fastcdr::Cdr::serialize_encapsulation(void)	[Unknown]	0x112a0
+eprosima::fastdds::rtps::SharedMemTransport::push_discard	0.010000	0.010000	0.0	0.0	libfastrtps.so.2.14	eprosima::fastdds::rtps::SharedMemTransport::push_discard(std::shared_ptr<eprosima::fastdds::rtps::SharedMemManager::Buffer> const&, eprosima::fastrtps::rtps::Locator_t const&)	[Unknown]	0x5d69d0
+func@0x14fc0	0.010000	0.010000	0.0	0.0	libsensor_msgs__rosidl_typesupport_fastrtps_cpp.so	func@0x14fc0	[Unknown]	0x14fc0
+func@0x2cc820	0.010000	0.010000	0.0	0.0	libfastrtps.so.2.14	func@0x2cc820	[Unknown]	0x2cc820
+rclcpp::Publisher<nav_msgs::msg::Odometry_<std::allocator<void>>, std::allocator<void>>::do_inter_process_publish	0.010000	0.010000	0.0	0.0	limo_base	rclcpp::Publisher<nav_msgs::msg::Odometry_<std::allocator<void>>, std::allocator<void>>::do_inter_process_publish(nav_msgs::msg::Odometry_<std::allocator<void>> const&)	publisher.hpp	0x8c490
+std::condition_variable::notify_all	0.010000	0.010000	0.0	0.0	libstdc++.so.6	std::condition_variable::notify_all(void)	[Unknown]	0xe2a10
+func@0x19e420	0.009997	0.009997	0.0	0.0	libfastrtps.so.2.14	func@0x19e420	[Unknown]	0x19e420

@@ -1,0 +1,10 @@
+Loading parameters: 
+- port name: shm/ttyLimoAudit_41476
+- odom frame name: odom
+- base frame name: base_link
+- odom topic name: 0
+[INFO] [1793550622.864937453] [limo_base]: connet the serial port:'/dev/shm/ttyLimoAudit_41476'
+[INFO] [1793550622.865070765] [limo_base]: enableCommandedMode :
+[INFO] [1793550622.865082323] [limo_base]: Open the serial port:'/dev/shm/ttyLimoAudit_41476'
+[INFO] [1793550628.336784321] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+terminate called without an active exception

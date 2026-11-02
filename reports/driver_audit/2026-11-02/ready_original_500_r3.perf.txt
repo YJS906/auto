@@ -1,0 +1,16 @@
+# started on Mon Nov  2 01:40:12 2026
+
+
+ Performance counter stats for '/tmp/limo-driver-audit/install/limo_base/lib/limo_base/limo_base --ros-args -p port_name:=shm/ttyLimoAudit_46552':
+
+            520.84 msec task-clock:u                                                          
+                 0      context-switches:u                                                    
+         842781847      cycles:u                                                              
+         268297794      instructions:u                                                        
+
+       8.861301518 seconds time elapsed
+
+       0.320009000 seconds user
+       0.257946000 seconds sys
+
+

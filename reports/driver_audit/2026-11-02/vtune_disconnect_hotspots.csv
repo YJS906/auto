@@ -1,0 +1,21 @@
+Function	CPU Time	CPU Time:Effective Time	CPU Time:Spin Time	CPU Time:Overhead Time	Module	Function (Full)	Source File	Start Address
+__GI___libc_read	2.469945	2.469945	0.0	0.0	libc.so.6	__GI___libc_read	read.c	0x11bd20
+read	1.120094	1.120094	0.0	0.0	limo_base	read	unistd.h	0x7750a
+rclcpp::contexts::get_global_default_context	0.119989	0.119989	0.0	0.0	librclcpp.so	rclcpp::contexts::get_global_default_context(void)	[Unknown]	0x111380
+func@0xffa90	0.109982	0.109982	0.0	0.0	librclcpp.so	func@0xffa90	[Unknown]	0xffa90
+_dl_open	0.099991	0.099991	0.0	0.0	ld-linux-x86-64.so.2	_dl_open	dl-open.c	0xd0b0
+std::shared_ptr<rclcpp::Context>::~shared_ptr	0.059983	0.059983	0.0	0.0	limo_base	std::shared_ptr<rclcpp::Context>::~shared_ptr(void)	shared_ptr.h	0x77486
+rclcpp::Context::is_valid	0.050018	0.050018	0.0	0.0	librclcpp.so	rclcpp::Context::is_valid(void) const	[Unknown]	0x1035b0
+rclcpp::ok	0.029992	0.029992	0.0	0.0	librclcpp.so	rclcpp::ok(std::shared_ptr<rclcpp::Context>)	[Unknown]	0x1f97b0
+rcl_context_is_valid	0.019999	0.019999	0.0	0.0	librcl.so	rcl_context_is_valid	[Unknown]	0xfca0
+__cxa_demangle	0.010009	0.010009	0.0	0.0	libc++abi.so	__cxa_demangle	[Unknown]	0x21fe0
+_dl_runtime_resolve_xsavec	0.010005	0.010005	0.0	0.0	ld-linux-x86-64.so.2	_dl_runtime_resolve_xsavec	dl-trampoline.h	0x152f0
+AgileX::LimoDriver::readData	0.010003	0.010003	0.0	0.0	limo_base	AgileX::LimoDriver::readData(void)	limo_driver.cpp	0x6fce6
+OS_BARESYSCALL_DoCallAsmIntel64Linux	0.010002	0.010002	0.0	0.0	libc-dynamic.so	OS_BARESYSCALL_DoCallAsmIntel64Linux	[Unknown]	0x80954
+memset	0.010001	0.010001	0.0	0.0	libc-dynamic.so	memset	[Unknown]	0x6a3b0
+(anonymous namespace)::itanium_demangle::AbstractManglingParser<(anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, (anonymous namespace)::DefaultAllocator>::parseEncoding	0.010000	0.010000	0.0	0.0	libc++abi.so	(anonymous namespace)::itanium_demangle::AbstractManglingParser<(anonymous namespace)::itanium_demangle::ManglingParser<(anonymous namespace)::DefaultAllocator>, (anonymous namespace)::DefaultAllocator>::parseEncoding(void)	[Unknown]	0x1bdb0
+eprosima::fastcdr::Cdr::state::state	0.010000	0.010000	0.0	0.0	libfastcdr.so.2	eprosima::fastcdr::Cdr::state::state(eprosima::fastcdr::Cdr const&)	[Unknown]	0xad50
+eprosima::fastrtps::rtps::StatefulWriter::deliver_sample_to_network	0.010000	0.010000	0.0	0.0	libfastrtps.so.2.14	eprosima::fastrtps::rtps::StatefulWriter::deliver_sample_to_network(eprosima::fastrtps::rtps::CacheChange_t*, eprosima::fastrtps::rtps::RTPSMessageGroup&, eprosima::fastrtps::rtps::LocatorSelectorSender&, std::chrono::time_point<std::chrono::_V2::steady_clock, std::chrono::duration<long, std::ratio<(long)1, (long)1000000000>>> const&)	[Unknown]	0x2d42d0
+operator new	0.009997	0.009997	0.0	0.0	libc++abi.so	operator new(unsigned long)	[Unknown]	0x25000
+__gnu_cxx::__exchange_and_add_dispatch	0.009995	0.009995	0.0	0.0	limo_base	__gnu_cxx::__exchange_and_add_dispatch(int*, int)	atomicity.h	0x774ee
+func@0xe140	0.009995	0.009995	0.0	0.0	libc++abi.so	func@0xe140	[Unknown]	0xe140

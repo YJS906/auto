@@ -1,5 +1,10 @@
 # LIMO Pro 대회 트랙 시뮬레이션
 
+카메라 기반 CAD 지도 측위 베이스라인은 별도 `limo_localization` 패키지에 추가했습니다.
+IPM/RGB-D × ICP/Distance Transform 비교, 휠·IMU 예측과 영상 보정, 전역 초기화·차량 이동 후 재측위, 실행·평가는
+[측위 개발 문서](docs/LOCALIZATION.md)를 참고하십시오. 아래 시뮬레이터 자체에는 자율주행 제어가 포함되지 않습니다.
+측위 확인 전 주행을 막으려면 `./tools/run_sim.sh require_localization:=true`를 사용하고 측위 노드도 실행하십시오.
+
 Ubuntu 24.04 + ROS 2 Jazzy + **Gazebo Harmonic 8**용 실행 환경입니다. 요청에 따라 **맵·차량·센서·수동 조작만** 제공합니다. 자율주행·차선 추종 알고리즘은 포함하지 않습니다.
 
 도면 기준 **10 × 6 m** 노면, 공식 WEGO 메시를 사용하는 차량, 물리 바퀴/앞바퀴 조향, RGB 카메라와 IMU가 기본 구성입니다. 실차 주행 모드 확인 전이라 `ackermann`을 임시 기본값으로 두었습니다. `mode:=diff`로 차동구동 모델을 선택할 수 있습니다.

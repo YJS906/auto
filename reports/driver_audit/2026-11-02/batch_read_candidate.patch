@@ -1,0 +1,32 @@
+--- original/include/limo_base/serial_port.h
++++ candidate/include/limo_base/serial_port.h
+@@ -55,6 +55,7 @@
+     int isOpen() { return fd_ >= 0 ? 0 : -1; }
+ 
+     inline int readByte(uint8_t *data) { return read(fd_, data, 1); }
++    inline int readBytes(uint8_t *data, size_t length) { return read(fd_, data, length); }
+     inline int writeData(const uint8_t *buf, uint16_t length) { return write(fd_, buf, length); }
+ 
+ private:
+--- original/src/limo_driver.cpp
++++ candidate/src/limo_driver.cpp
+@@ -138,16 +138,16 @@
+ }
+ 
+ void LimoDriver::readData() {
+-    uint8_t rx_data = 0;
++    uint8_t rx_data[256];
+     // RCLCPP_INFO(this->get_logger(),"connet the serial port:2");
+     while (rclcpp::ok()) {
+         // RCLCPP_INFO(this->get_logger(),"connet the serial port:3");
+-        auto len = port_->readByte(&rx_data);
++        auto len = port_->readBytes(rx_data, sizeof(rx_data));
+         if (len < 1)
+             continue;
+         // RCLCPP_INFO(this->get_logger(),"connet the serial port:'%s'",port_->readByte(&rx_data));
+         // std::cout << "- the rx data: " << rx_data << std::endl;
+-        processRxData(rx_data);
++        for (int i = 0; i < len; ++i) processRxData(rx_data[i]);
+         // RCLCPP_INFO(this->get_logger(),"connet the serial port:4");
+         
+     }

@@ -1,0 +1,9 @@
+Loading parameters: 
+- port name: shm/ttyLimoAudit_40662
+- odom frame name: odom
+- base frame name: base_link
+- odom topic name: 0
+[INFO] [1793550495.597574858] [limo_base]: connet the serial port:'/dev/shm/ttyLimoAudit_40662'
+[INFO] [1793550495.597756295] [limo_base]: enableCommandedMode :
+[INFO] [1793550495.597769385] [limo_base]: Open the serial port:'/dev/shm/ttyLimoAudit_40662'
+/home/a/2026autorace/vendor/limo_pro/limo_ros2/limo_base/src/limo_driver.cpp:392:43: runtime error: nan is outside the range of representable values of type 'short int'

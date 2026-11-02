@@ -1,0 +1,17 @@
+{
+  "checked": 12,
+  "checks": [
+    "local source still equals verified GitHub object",
+    "stop and invalid command float-cast UB reproduced",
+    "normal SIGINT shutdown abort reproduced",
+    "status seconds/nanoseconds scale error reproduced",
+    "small yaw increments lost in odometry",
+    "roll/pitch omitted and twist covariance left zero",
+    "reverse lateral velocity sign asymmetry reproduced",
+    "disconnect busy-loop CPU above 90% of one core",
+    "no additional stop frame during command silence",
+    "bad checksum frames rejected",
+    "IMU keeps publishing after accel/gyro frames stop",
+    "all 12 synchronized benchmark runs delivered every injected output"
+  ]
+}
